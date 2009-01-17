@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsld="../ns_description" xmlns:decl="../ns_declarations" targetNamespace="../ns_description" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="../ns_declarations" schemaLocation="../lamplibrary_xml/declarations.xsd"/>
+	<xs:element name="DeviceDescription" type="xsld:DeviceDescrType">
+		<xs:annotation>
+			<xs:documentation>Root element: Device description</xs:documentation>
+		</xs:annotation>
+		<xs:unique name="UniqueChannelNo">
+			<xs:selector xpath="./xsld:ChannelDefinition/xsld:Channel"/>
+			<xs:field xpath="@ChannelNo"/>
+		</xs:unique>
+		<xs:unique name="UniqueChannelName">
+			<xs:selector xpath="./xsld:ChannelDefinition/xsld:Channel"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:keyref name="MasterChannelNoRef" refer="xsld:UniqueChannelNo">
+			<xs:selector xpath="./xsld:ChannelDefinition/xsld:Channel"/>
+			<xs:field xpath="@MasterChannelNo"/>
+		</xs:keyref>
+		<xs:unique name="UniqueDepName">
+			<xs:selector xpath="./xsld:DependencyDeclaration/xsld:Dependency"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:keyref name="DepChannelNameRef" refer="xsld:UniqueChannelName">
+			<xs:selector xpath="./xsld:DependencyDeclaration/xsld:Dependency"/>
+			<xs:field xpath="@ChannelName"/>
+		</xs:keyref>
+		<xs:keyref name="FuncDescrChannelNameRef" refer="xsld:UniqueChannelName">
+			<xs:selector xpath="./xsld:ParameterDefinition/xsld:FuncDiscr"/>
+			<xs:field xpath="@ChannelName"/>
+		</xs:keyref>
+		<xs:keyref name="DependencyNameRef" refer="xsld:UniqueDepName">
+			<xs:selector xpath="ParameterDefinition/xsld:FuncDiscr/xsld:Range/xsld:Dependency"/>
+			<xs:field xpath="@Name"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:attributeGroup name="ManInfoGroup">
+		<xs:attribute name="Manufacturer" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Manufacturer name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Model" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Manufacturers model name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Firmware" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Device Firmware version</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Mode" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Mode, e.g. 16bit, 8bit, extended,...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="RangeGroup">
+		<xs:annotation>
+			<xs:documentation>Group of attributes used in a DMX range explanation</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="SubName" type="decl:SubNameType" use="optional">
+			<xs:annotation>
+				<xs:documentation>Name describing the range. E.g. Slot1, Slot2, Reset, LampOn, ... -> To map with different device types</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Semantic" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Semantic description. E.g. Open/White, Breaks, Green, Leaves, ...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Unit" type="decl:UnitType" use="optional">
+			<xs:annotation>
+				<xs:documentation>Units of the physical values. E.g degree, RPM, BPM, cm,...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DmxBottom" type="xs:unsignedByte" use="required">
+			<xs:annotation>
+				<xs:documentation>Bottom value of the DMX range</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="PhysBottom" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>Value of the Physical representation of the Dmx bottom value, in Unit</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DmxTop" type="xs:unsignedByte" use="required">
+			<xs:annotation>
+				<xs:documentation>Top value of the DMX range</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="PhysTop" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>Value of the Physical representation of the Dmx top value, in Unit</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DmxToPhys" type="decl:TransferType" use="required">
+			<xs:annotation>
+				<xs:documentation>Transfert function between DMX value and Physical value.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Time" type="xs:long" use="optional">
+			<xs:annotation>
+				<xs:documentation>Time to stay in this range to validate the setting, in mili seconds (ms). 0 or not filled in if not applicable</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:complexType name="DeviceDescrType">
+		<xs:annotation>
+			<xs:documentation>Type description for root element</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ManufacturerInfo">
+				<xs:complexType>
+					<xs:attributeGroup ref="xsld:ManInfoGroup"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PhysicalProperties" type="xsld:PhysPropType"/>
+			<xs:element name="ChannelDefinition">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="xsld:ChanDefType">
+							<xs:attribute name="Align" type="xs:nonNegativeInteger" use="required"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DependencyDeclaration" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Dependency">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="xsld:DependencyType"/>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ParameterDefinition" type="xsld:ParamType" minOccurs="0"/>
+			<xs:element name="MacroDefinition" minOccurs="0" type="xsld:MacroDefType">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ManInfoType">
+		<xs:annotation>
+			<xs:documentation>info about manufacturer, lamp code, physical properties</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="ChanDefType">
+		<xs:annotation>
+			<xs:documentation>enumeration of all the channels</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="Channel" type="xsld:ChanType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PhysValType">
+		<xs:sequence>
+			<xs:element name="Unit" type="decl:UnitType">
+				<xs:annotation>
+					<xs:documentation>Unit, e.g mm, cm, degree,...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="xs:decimal">
+				<xs:annotation>
+					<xs:documentation>decimal value</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PhysPropType">
+		<xs:sequence>
+			<xs:element name="Weight" type="xsld:PhysValType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Total weight of device</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Geometry" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Exterior dimensions</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Width" type="xsld:PhysValType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Total Width</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Depth" type="xsld:PhysValType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Total Depth</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Height" type="xsld:PhysValType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Total Hight</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Lens" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Lens and beam definition</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:element name="LensType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Lens type, e.g. Standard, wide, narrow</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Diameter" type="xsld:PhysValType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Lens diameter</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="BeamPos" type="xsld:RefBeamType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Lens positioning relative to zero reference according to lens position convention document.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="LensName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Lens Name as defined by manufacturer</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="IntensityCurve" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Intensity curve to provide different luminous intensity with different angles</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="Angle" type="xs:decimal">
+										<xs:annotation>
+											<xs:documentation>Lens or zoom angle in degree. 0 = narrow</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Intensity" type="xs:decimal">
+										<xs:annotation>
+											<xs:documentation>Light emission intensity in Lumen</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Lamp" type="xsld:LampType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Lamp definition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute type="decl:KindOfDeviceType" name="Type" use="required">
+			<xs:annotation>
+				<xs:documentation>Set the type of device: Yoke, Mirro, Scroller, Dimmer,...	</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="RangeType">
+		<xs:attributeGroup ref="xsld:RangeGroup"/>
+	</xs:complexType>
+	<xs:complexType name="RefBeamType">
+		<xs:sequence minOccurs="0">
+			<xs:element name="XOffset" type="xsld:PhysValType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>X offset from zero reference</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="YOffset" type="xsld:PhysValType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Y offset from zero reference</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ZOffset" type="xsld:PhysValType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Z offset from zero reference</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlfaOffset" type="xsld:PhysValType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Rotation around X axis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BetaOffset" type="xsld:PhysValType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Rotation around Y axis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GammaOffset" type="xsld:PhysValType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParamType">
+		<xs:annotation>
+			<xs:documentation>lamp parameters: position, intensity, colour, beam, control</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="FuncDiscr">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="xsld:FuncDiscrType"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChanType">
+		<xs:attribute name="ChannelNo" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:positiveInteger"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Name" type="decl:ChanNameType" use="required"/>
+		<xs:attribute name="Semantic" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Category" type="decl:Category" use="required"/>
+		<xs:attribute name="HighlightValue" type="xs:unsignedByte" default="0"/>
+		<xs:attribute name="BitRes" type="decl:BitRes" default="8"/>
+		<xs:attribute name="ByteNo" type="decl:ByteNo" default="0"/>
+		<xs:attribute name="DefaultValue" type="xs:unsignedByte" default="0"/>
+		<xs:attribute name="MasterChannelNo" type="xs:positiveInteger" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="FuncDiscrType">
+		<xs:sequence>
+			<xs:element name="Range" type="xsld:RangeLevel2Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="ChannelName" type="decl:ChanNameType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="DependencyType">
+		<xs:annotation>
+			<xs:documentation>Dependency type description</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Range" type="xsld:RangeLevel1Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+		<xs:attribute name="ChannelName" type="decl:ChanNameType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="RangeLevel2Type">
+		<xs:annotation>
+			<xs:documentation>DMX Range attributes with dependency</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="xsld:RangeLevel1Type">
+				<xs:sequence minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="Dependency">
+						<xs:complexType>
+							<xs:attribute name="Name" type="xs:string" use="required"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RangeLevel1Type">
+		<xs:annotation>
+			<xs:documentation>DMX Range attributes without dependency</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="xsld:RangeGroup"/>
+	</xs:complexType>
+	<xs:complexType name="LampType">
+		<xs:annotation>
+			<xs:documentation>Lamp type description, model, power, temp</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Type, e.g. HMI, MSD,...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Model" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Complete name and model, e.g. Osram HMI 1200 W/S</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Power" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Power consumption in Watts</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColorTemp" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Colour temperature in Kelvin (K)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MacroDefType">
+		<xs:sequence>
+			<xs:element name="Macro" maxOccurs="unbounded" type="xsld:MacroType">
+				
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MacroType">
+		<xs:sequence>
+			<xs:element name="MacroStep" maxOccurs="unbounded">
+				
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Name" use="required" type="xs:string">
+			
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

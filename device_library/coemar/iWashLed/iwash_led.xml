@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Coemar" Model="iWashLed" Firmware=""/>
+	<PhysicalProperties Type="YokeWash">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>22.7</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>508</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>457</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>802</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>Led</Type>
+			<Model>Led</Model>
+			<Power>375</Power>
+			<ColorTemp>6000</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="12">
+		<Channel ChannelNo="1" Name="Pan" Semantic="Pan Coarse" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1"/>
+		<Channel ChannelNo="3" Name="Tilt" Semantic="Tilt Coarse" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3"/>
+		<Channel ChannelNo="5" Name="MSpeed" Semantic="MSpeed" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="6" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="255"/>
+		<Channel ChannelNo="7" Name="Shutter" Semantic="Shutter" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="8" Name="Red" Semantic="Red" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="9" Name="Green" Semantic="Green" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="10" Name="Blue" Semantic="Blue" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="11" Name="Amber" Semantic="White Colour Balance" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="12" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration>
+		<Dependency Name="Zap / Strobe" ChannelName="Shutter">
+			<Range DmxBottom="11" DmxTop="30" DmxToPhys="proportionalUp" Unit="Hz"/>
+		</Dependency>
+	</DependencyDeclaration>
+	<ParameterDefinition>
+		<FuncDiscr ChannelName="Pan">
+			<Range Unit="degrees" Semantic="Pan" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-180" PhysTop="180"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Tilt">
+			<Range Unit="degrees" Semantic="Tilt" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-126" PhysTop="126"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="MSpeed">
+			<Range Semantic="Fast" DmxBottom="0" DmxTop="10" DmxToPhys="fix"/>
+			<Range Semantic="Ultra Fast" DmxBottom="11" DmxTop="25" DmxToPhys="fix"/>
+			<Range Semantic="Vect  mode Fast/Slow" DmxBottom="26" DmxTop="127" DmxToPhys="proportionalDown"/>
+			<Range Semantic="Track mode Fast/Slow" DmxBottom="128" DmxTop="247" DmxToPhys="proportionalDown"/>
+			<Range Semantic="Track mode Slow" DmxBottom="248" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Intensity1">
+			<Range SubName="Closed" DmxBottom="0" DmxTop="7" DmxToPhys="fix"/>
+			<Range SubName="Open" DmxBottom="8" DmxTop="255" DmxToPhys="proportionalUp" Unit="%"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Shutter">
+			<Range SubName="Closed" Semantic="Shutter Closed" DmxBottom="0" DmxTop="9" DmxToPhys="fix" Unit="Hz"/>
+			<Range SubName="Strobe" Semantic="Strobe slow/Fast" DmxBottom="10" DmxTop="57" DmxToPhys="proportionalUp" Unit="Hz"/>
+			<Range SubName="Open" Semantic="Shutter Open" DmxBottom="58" DmxTop="59" DmxToPhys="fix" Unit="Hz"/>
+			<Range SubName="SnapOpenRampShut" Semantic="Pulse  Slow/Fast" DmxBottom="60" DmxTop="108" DmxToPhys="proportionalUp" Unit="Hz"/>
+			<Range SubName="Open" Semantic="Shutter Open" DmxBottom="109" DmxTop="110" DmxToPhys="fix"/>
+			<Range SubName="RampOpenSnapShut" Semantic="Pulse Fast/Slow" DmxBottom="111" DmxTop="159" DmxToPhys="proportionalDown"/>
+			<Range SubName="Open" Semantic="Shutter Open" DmxBottom="160" DmxTop="161" DmxToPhys="fix"/>
+			<Range SubName="StrobeRandom" Semantic="Strobe Random Syn" DmxBottom="162" DmxTop="207" DmxToPhys="proportionalUp"/>
+			<Range SubName="Open" Semantic="Shutter Open" DmxBottom="208" DmxTop="209" DmxToPhys="fix"/>
+			<Range SubName="StrobeRandom" Semantic="Strobe Random" DmxBottom="210" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Red">
+			<Range Semantic="Red" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Green">
+			<Range Semantic="Green" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Blue">
+			<Range Semantic="Blue" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Amber">
+			<Range Semantic="White Colour Balance" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Control">
+			<Range SubName="NoFunction" Semantic="No Function" DmxBottom="0" DmxTop="100" Time="0" DmxToPhys="fix"/>
+			<Range SubName="PanTiltReset" Semantic="Pan / Tilt Reset" DmxBottom="101" DmxTop="170" Time="0" DmxToPhys="fix"/>
+			<Range SubName="Closed" Semantic="Black-out Movement" DmxBottom="171" DmxTop="200" Time="0" DmxToPhys="fix"/>
+			<Range SubName="FanSpeedMax" Semantic="Fan Speed Max" DmxBottom="201" DmxTop="240" Time="0" DmxToPhys="fix"/>
+			<Range SubName="Index" Semantic="Control White Balance" DmxBottom="241" DmxTop="255" Time="0" DmxToPhys="fix"/>
+		</FuncDiscr>
+	</ParameterDefinition>
+</DeviceDescription>

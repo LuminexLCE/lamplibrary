@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Coemar" Model="Iwash 575 eb" Firmware=""/>
+	<PhysicalProperties Type="YokeWash">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>22.7</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>508</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>457</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>802</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>Philips</Type>
+			<Model>Philips 575 MSD</Model>
+			<Power>575</Power>
+			<ColorTemp>6000</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="16">
+		<Channel ChannelNo="1" Name="Pan" Semantic="Pan Coarse" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1"/>
+		<Channel ChannelNo="3" Name="Tilt" Semantic="Tilt Coarse" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3"/>
+		<Channel ChannelNo="5" Name="MSpeed" Semantic="MSpeed" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="6" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="255"/>
+		<Channel ChannelNo="7" Name="Shutter" Semantic="Shutter" Category="Beam" DefaultValue="255"/>
+		<Channel ChannelNo="8" Name="Zoom" Semantic="Zoom" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="9" Name="BeamAngle" Semantic="BeamAngle" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="10" Name="Colour1" Semantic="Colour " Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="11" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="12" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="13" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="14" Name="Colour1Pos" Semantic="Colour Pos" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="15" Name="ZapEffect" Semantic="ZapEffect" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="16" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration>
+		<Dependency Name="Zap / Strobe" ChannelName="Shutter">
+			<Range DmxBottom="11" DmxTop="30" DmxToPhys="proportionalUp" Unit="Hz"/>
+		</Dependency>
+	</DependencyDeclaration>
+	<ParameterDefinition>
+		<FuncDiscr ChannelName="Pan">
+			<Range Unit="degrees" Semantic="Pan" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-180" PhysTop="180"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Tilt">
+			<Range Unit="degrees" Semantic="Tilt" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-126" PhysTop="126"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="MSpeed">
+			<Range Semantic="Fast" DmxBottom="0" DmxTop="10" DmxToPhys="fix"/>
+			<Range Semantic="Ultra Fast" DmxBottom="11" DmxTop="25" DmxToPhys="fix"/>
+			<Range Semantic="Vect  mode Fast/Slow" DmxBottom="26" DmxTop="127" DmxToPhys="proportionalDown"/>
+			<Range Semantic="Track mode Fast/Slow" DmxBottom="128" DmxTop="247" DmxToPhys="proportionalDown"/>
+			<Range Semantic="Track mode Slow" DmxBottom="248" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Intensity1">
+			<Range SubName="Closed" DmxBottom="0" DmxTop="7" DmxToPhys="fix"/>
+			<Range SubName="Open" DmxBottom="8" DmxTop="255" DmxToPhys="proportionalUp" Unit="%"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Shutter">
+			<Range SubName="Closed" Semantic="Shutter Closed" DmxBottom="0" DmxTop="9" DmxToPhys="fix"/>
+			<Range SubName="Strobe" Semantic="Shutter Synchronised" DmxBottom="10" DmxTop="66" DmxToPhys="proportionalUp" Unit="Hz"/>
+			<Range SubName="Open" Semantic="Shutter Open" DmxBottom="67" DmxTop="68" DmxToPhys="fix"/>
+			<Range SubName="SnapOpenRampShut" Semantic="Pulse  Slow/Fast" DmxBottom="69" DmxTop="125" DmxToPhys="proportionalUp" Unit="Hz"/>
+			<Range SubName="Open" Semantic="Shutter Open" DmxBottom="126" DmxTop="127" DmxToPhys="fix"/>
+			<Range SubName="SnapOpenRampShut" Semantic="Pulse Fast/Slow" DmxBottom="128" DmxTop="184" DmxToPhys="proportionalDown" Unit="Hz"/>
+			<Range SubName="Open" Semantic="Shutter Open" DmxBottom="185" DmxTop="187" DmxToPhys="fix"/>
+			<Range SubName="StrobeRandom" Semantic="Strobe Random" DmxBottom="188" DmxTop="244" DmxToPhys="proportionalUp" Unit="Hz"/>
+			<Range SubName="Open" Semantic="Shutter Open" DmxBottom="245" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Zoom">
+			<Range Semantic="Narrow" DmxBottom="0" DmxTop="9" DmxToPhys="fix"/>
+			<Range Semantic="Zoom Narrow/Wide" DmxBottom="10" DmxTop="255" DmxToPhys="proportionalUp" Unit="degrees"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="BeamAngle">
+			<Range Semantic="No Filter" DmxBottom="0" DmxTop="9" DmxToPhys="fix"/>
+			<Range Semantic="BeamAngle" DmxBottom="10" DmxTop="230" DmxToPhys="proportionalUp" Unit="degrees"/>
+			<Range Semantic="CTO" DmxBottom="231" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Colour1">
+			<Range SubName="Slot_01" Semantic="Open/white" DmxBottom="0" DmxTop="7" DmxToPhys="fix"/>
+			<Range SubName="Slot_02" Semantic="Colour 1" DmxBottom="8" DmxTop="27" DmxToPhys="fix"/>
+			<Range SubName="Slot_03" Semantic="Colour 2" DmxBottom="28" DmxTop="47" DmxToPhys="fix"/>
+			<Range SubName="Slot_04" Semantic="Colour 3" DmxBottom="48" DmxTop="67" DmxToPhys="fix"/>
+			<Range SubName="Slot_05" Semantic="Colour 4" DmxBottom="68" DmxTop="87" DmxToPhys="fix"/>
+			<Range SubName="Slot_06" Semantic="Colour 5" DmxBottom="88" DmxTop="107" DmxToPhys="fix"/>
+			<Range SubName="Slot_07" Semantic="Colour 6" DmxBottom="108" DmxTop="127" DmxToPhys="fix"/>
+			<Range SubName="SpinForward" Semantic="SpinForward" DmxBottom="128" DmxTop="190" DmxToPhys="proportionalDown"/>
+			<Range SubName="SpinStop" Semantic="SpinStop" DmxBottom="191" DmxTop="192" DmxToPhys="fix"/>
+			<Range SubName="SpinBackward" Semantic="SpinBackward" DmxBottom="193" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Cyan">
+			<Range Semantic="Open/white" DmxBottom="0" DmxTop="9" DmxToPhys="fix"/>
+			<Range Semantic="Cyan" DmxBottom="10" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Magenta">
+			<Range Semantic="Open/white" DmxBottom="0" DmxTop="9" DmxToPhys="fix"/>
+			<Range Semantic="Magenta" DmxBottom="10" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Yellow">
+			<Range Semantic="Open/white" DmxBottom="0" DmxTop="9" DmxToPhys="fix"/>
+			<Range Semantic="Yellow" DmxBottom="10" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Colour1Pos">
+			<Range Semantic="Snap Colour" DmxBottom="0" DmxTop="125" DmxToPhys="fix"/>
+			<Range Semantic="Ramp Colour" DmxBottom="126" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="ZapEffect">
+			<Range Semantic="No Effect" DmxBottom="0" DmxTop="10" DmxToPhys="fix"/>
+			<Range Semantic="Zap Strobe" DmxBottom="11" DmxTop="30" DmxToPhys="fix">
+				<Dependency Name="Zap / Strobe"/>
+			</Range>
+			<Range Semantic="Zap Lamp Frequency" DmxBottom="31" DmxTop="249" DmxToPhys="proportionalUp"/>
+			<Range Semantic="Move Blackout" DmxBottom="250" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Control">
+			<Range SubName="NoFunction" Semantic="No Function" DmxBottom="0" DmxTop="10" Time="0" DmxToPhys="fix"/>
+			<Range SubName="LampOff" Semantic="LampOff" DmxBottom="11" DmxTop="29" Time="6000" DmxToPhys="fix"/>
+			<Range SubName="PanTiltReset" Semantic="Pan / Tilt Reset" DmxBottom="30" DmxTop="65" Time="6000" DmxToPhys="fix"/>
+			<Range SubName="ResetMotors" Semantic="Reset 1" DmxBottom="66" DmxTop="100" Time="6000" DmxToPhys="fix"/>
+			<Range SubName="ResetMotors_1" Semantic="Reset 2" DmxBottom="101" DmxTop="135" Time="6000" DmxToPhys="fix"/>
+			<Range SubName="ResetAll" Semantic="Reset All" DmxBottom="136" DmxTop="170" Time="6000" DmxToPhys="fix"/>
+			<Range SubName="FanSpeedMax" Semantic="Fan Speed Max" DmxBottom="171" DmxTop="249" Time="6000" DmxToPhys="fix"/>
+			<Range SubName="LampOn" Semantic="LampOn" DmxBottom="250" DmxTop="255" Time="6000" DmxToPhys="fix"/>
+		</FuncDiscr>
+	</ParameterDefinition>
+</DeviceDescription>

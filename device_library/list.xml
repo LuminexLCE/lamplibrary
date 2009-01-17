@@ -1,0 +1,11 @@
+<ManufacturerList>
+ <Manufacturer Name="Clay paky" Location="claypaky/" />
+ <Manufacturer Name="Coemar" Location="coemar/" />
+ <Manufacturer Name="Generic" Location="generic/" />
+ <Manufacturer Name="High End Systems" Location="highend/" />
+ <Manufacturer Name="Martin" Location="martin/" />
+ <Manufacturer Name="Movitec" Location="movitec/" />
+ <Manufacturer Name="Syncrolite" Location="syncrolite/" />
+ <Manufacturer Name="Thomas / PixelRange" Location="thomas/" />
+ <Manufacturer Name="Vari-Lite" Location="vari-lite/" />
+</ManufacturerList>

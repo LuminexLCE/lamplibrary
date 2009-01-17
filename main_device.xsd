@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsld="../ns_main" xmlns:decl="../ns_declarations" targetNamespace="../ns_main" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="../ns_declarations" schemaLocation="../lamplibrary_xml/declarations.xsd"/>
+	<xs:element name="MainDevice">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="SubDevice">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="xsld:SubDeviceType">
+								<xs:attribute name="XmlFile" type="xsld:XmlFileNameType" use="required"/>
+								<xs:attributeGroup ref="xsld:PatchGroup"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Name" type="xsld:NameType" use="required"/>
+			<xs:attribute type="decl:KindOfDeviceType" name="type" use="required">
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="SubDeviceType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Option" type="xsld:Options"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Options">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="OptionItem">
+				<xs:complexType>
+					<xs:attribute name="Name" type="xsld:NameType" use="required"/>
+					<xs:attribute name="XslFile" type="xsld:XslFileNameType"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xsld:NameType" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="XslFileNameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[-_.a-zA-Z0-9]+\.xsl"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="XmlFileNameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[-_.a-zA-Z0-9]+\.xml"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NameType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="PatchGroup">
+		<xs:attribute name="Patch" use="optional" type="xs:boolean"/>
+		<xs:attribute name="Name" use="optional" type="xs:string"/>
+	</xs:attributeGroup>
+</xs:schema>

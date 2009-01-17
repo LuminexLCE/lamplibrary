@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Synchro zap qx 250" type="Effect">
+	<SubDevice XmlFile="synchro_zap_250.xml" Patch="true" Name="Synchro zap qx 250"/>
+</MainDevice>

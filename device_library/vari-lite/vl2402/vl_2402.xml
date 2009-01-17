@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Var*lite" Model="VL 2402" Firmware=""/>
+	<PhysicalProperties Type="YokeWash">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>25</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>438</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>483</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>645</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>Metal Halide</Type>
+			<Model>700 W Metal Halide</Model>
+			<Power>700</Power>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="15">
+		<Channel ChannelNo="1" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="255"/>
+		<Channel ChannelNo="2" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="3" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="2"/>
+		<Channel ChannelNo="4" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="5" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="4"/>
+		<Channel ChannelNo="6" Name="Blue" Semantic="Blue" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="7" Name="Amber" Semantic="Amber" Category="Colour" DefaultValue="255"/>
+		<Channel ChannelNo="8" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="9" Name="Colour1" Semantic="Colour Wheel" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="10" Name="Beam" Semantic="Beam Diffuser" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="14" Name="Shutter" Semantic="Shutter" Category="Beam" DefaultValue="255"/>
+		<Channel ChannelNo="11" Name="FocusTime" Semantic="Focus Time" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="12" Name="ColourTime" Semantic="Colour Time" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="13" Name="BeamTime" Semantic="Beam Time" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="15" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition>
+		<FuncDiscr ChannelName="Intensity1">
+			<Range Semantic="Intensity" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Pan">
+			<Range Unit="degrees" Semantic="Pan" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-270" PhysTop="270"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Tilt">
+			<Range Unit="degrees" Semantic="Tilt" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-135" PhysTop="135"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Blue">
+			<Range Semantic="Blue" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Amber">
+			<Range Semantic="Amber" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Magenta">
+			<Range Semantic="Magenta" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Colour1">
+			<Range SubName="Slot_01" Semantic="Open/white" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/>
+			<Range SubName="Slot_01/01" Semantic="White / Red" DmxBottom="9" DmxTop="9" DmxToPhys="fix"/>
+			<Range SubName="Slot_02" Semantic="Light Red" DmxBottom="18" DmxTop="18" DmxToPhys="fix"/>
+			<Range SubName="Slot_02/02" Semantic="Light Red / Blue" DmxBottom="26" DmxTop="26" DmxToPhys="fix"/>
+			<Range SubName="Slot_03" Semantic="Blue" DmxBottom="36" DmxTop="36" DmxToPhys="fix"/>
+			<Range SubName="Slot_03/03" Semantic="Blue / Yellow" DmxBottom="44" DmxTop="44" DmxToPhys="fix"/>
+			<Range SubName="Slot_04" Semantic="Yellow" DmxBottom="54" DmxTop="54" DmxToPhys="fix"/>
+			<Range SubName="Slot_04/04" Semantic="Yellow / Light Blue" DmxBottom="62" DmxTop="62" DmxToPhys="fix"/>
+			<Range SubName="Slot_05" Semantic="Light Blue" DmxBottom="72" DmxTop="72" DmxToPhys="fix"/>
+			<Range SubName="Slot_05/05" Semantic="Light Blue / Pink" DmxBottom="80" DmxTop="80" DmxToPhys="fix"/>
+			<Range SubName="Slot_06" Semantic="Pink" DmxBottom="90" DmxTop="90" DmxToPhys="fix"/>
+			<Range SubName="Slot_06/06" Semantic="Pink / Green" DmxBottom="98" DmxTop="98" DmxToPhys="fix"/>
+			<Range SubName="Slot_07" Semantic="Green" DmxBottom="108" DmxTop="108" DmxToPhys="fix"/>
+			<Range SubName="Slot_07/07" Semantic="Green / Magenta" DmxBottom="116" DmxTop="116" DmxToPhys="fix"/>
+			<Range SubName="Slot_08" Semantic="Magenta" DmxBottom="126" DmxTop="126" DmxToPhys="fix"/>
+			<Range SubName="Slot_08/08" Semantic="Magenta / Lavender" DmxBottom="134" DmxTop="134" DmxToPhys="fix"/>
+			<Range SubName="Slot_09" Semantic="Lavender" DmxBottom="144" DmxTop="144" DmxToPhys="fix"/>
+			<Range SubName="Slot_09/09" Semantic="Lavender / Amber" DmxBottom="152" DmxTop="152" DmxToPhys="fix"/>
+			<Range SubName="Slot_10" Semantic="Amber" DmxBottom="162" DmxTop="162" DmxToPhys="fix"/>
+			<Range SubName="Slot_10/10" Semantic="Amber / Orange" DmxBottom="170" DmxTop="170" DmxToPhys="fix"/>
+			<Range SubName="Slot_11" Semantic="Orange" DmxBottom="180" DmxTop="180" DmxToPhys="fix"/>
+			<Range SubName="Slot_11/11" Semantic="Orange / UV" DmxBottom="188" DmxTop="188" DmxToPhys="fix"/>
+			<Range SubName="Slot_12" Semantic="UV" DmxBottom="197" DmxTop="197" DmxToPhys="fix"/>
+			<Range SubName="Slot_12/12" Semantic="UV /  White" DmxBottom="206" DmxTop="206" DmxToPhys="fix"/>
+			<Range SubName="SpinForward" Semantic="SpinForward" DmxBottom="216" DmxTop="233" DmxToPhys="proportionalDown"/>
+			<Range SubName="SpinStop" Semantic="SpinStop" DmxBottom="234" DmxTop="236" DmxToPhys="fix"/>
+			<Range SubName="SpinBackward" Semantic="SpinBackward" DmxBottom="237" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Beam">
+			<Range Semantic="Diffuser" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalDown"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Shutter">
+			<Range SubName="Open" Semantic="Shutter open" DmxBottom="0" DmxTop="2" DmxToPhys="fix" Unit="Hz"/>
+			<Range SubName="Closed" Semantic="Shutter closed" DmxBottom="3" DmxTop="5" DmxToPhys="fix" Unit="Hz"/>
+			<Range SubName="StrobeRandom" Semantic="Random strobe" DmxBottom="6" DmxTop="12" DmxToPhys="proportionalUp" Unit="Hz"/>
+			<Range SubName="StrobePulse" Semantic="Speed Range" DmxBottom="13" DmxTop="255" DmxToPhys="proportionalUp" Unit="Hz"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="FocusTime">
+			<Range SubName="Macro_01" Semantic="Full Speed" DmxBottom="0" DmxTop="0" DmxToPhys="fix" Unit="sec" PhysTop="0" PhysBottom="0"/>
+			<Range SubName="Macro_02" Semantic="Time .2" DmxBottom="1" DmxTop="53" DmxToPhys="proportionalUp" Unit="sec" PhysTop="1" PhysBottom="10.6"/>
+			<Range SubName="Macro_03" Semantic="Time 1" DmxBottom="54" DmxTop="179" DmxToPhys="proportionalUp" Unit="sec" PhysTop="11" PhysBottom="60"/>
+			<Range SubName="Macro_04" Semantic="Time 5" DmxBottom="180" DmxTop="199" DmxToPhys="proportionalUp" Unit="sec" PhysTop="65" PhysBottom="100"/>
+			<Range SubName="Macro_05" Semantic="Time 10" DmxBottom="128" DmxTop="254" DmxToPhys="proportionalUp" Unit="sec" PhysTop="110" PhysBottom="310"/>
+			<Range SubName="Macro_06" Semantic="Follows Cue Data" DmxBottom="255" DmxTop="255" DmxToPhys="fix" Unit="sec" PhysTop="0" PhysBottom="0"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="ColourTime">
+			<Range SubName="Macro_01" Semantic="Full Speed" DmxBottom="0" DmxTop="0" DmxToPhys="fix" Unit="sec" PhysTop="0" PhysBottom="0"/>
+			<Range SubName="Macro_02" Semantic="Time .2" DmxBottom="1" DmxTop="53" DmxToPhys="proportionalUp" Unit="sec" PhysTop="1" PhysBottom="10.6"/>
+			<Range SubName="Macro_03" Semantic="Time 1" DmxBottom="54" DmxTop="179" DmxToPhys="proportionalUp" Unit="sec" PhysTop="11" PhysBottom="60"/>
+			<Range SubName="Macro_04" Semantic="Time 5" DmxBottom="180" DmxTop="199" DmxToPhys="proportionalUp" Unit="sec" PhysTop="65" PhysBottom="100"/>
+			<Range SubName="Macro_05" Semantic="Time 10" DmxBottom="128" DmxTop="254" DmxToPhys="proportionalUp" Unit="sec" PhysTop="110" PhysBottom="310"/>
+			<Range SubName="Macro_06" Semantic="Follows Cue Data" DmxBottom="255" DmxTop="255" DmxToPhys="fix" Unit="sec" PhysTop="0" PhysBottom="0"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="BeamTime">
+			<Range SubName="Macro_01" Semantic="Full Speed" DmxBottom="0" DmxTop="0" DmxToPhys="fix" Unit="sec" PhysBottom="0" PhysTop="0"/>
+			<Range SubName="Macro_02" Semantic="Time .2" DmxBottom="1" DmxTop="53" DmxToPhys="proportionalUp" Unit="sec" PhysBottom="1" PhysTop="10.6"/>
+			<Range SubName="Macro_03" Semantic="Time 1" DmxBottom="54" DmxTop="179" DmxToPhys="proportionalUp" Unit="sec" PhysBottom="11" PhysTop="60"/>
+			<Range SubName="Macro_04" Semantic="Time 5" DmxBottom="180" DmxTop="199" DmxToPhys="proportionalUp" Unit="sec" PhysBottom="65" PhysTop="100"/>
+			<Range SubName="Macro_05" Semantic="Time 10" DmxBottom="128" DmxTop="254" DmxToPhys="proportionalUp" Unit="sec" PhysBottom="110" PhysTop="310"/>
+			<Range SubName="Macro_06" Semantic="Follows Cue Data" DmxBottom="255" DmxTop="255" DmxToPhys="fix" Unit="sec" PhysBottom="0" PhysTop="0"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Control">
+			<Range SubName="DisplayOn" DmxBottom="1" DmxTop="4" Time="3000" DmxToPhys="fix"/>
+			<Range SubName="NoFunction" DmxBottom="5" DmxTop="80" Time="0" DmxToPhys="fix"/>
+			<Range SubName="LampOnReset" DmxBottom="81" DmxTop="87" Time="3000" DmxToPhys="fix"/>
+			<Range SubName="NoFunction" DmxBottom="88" DmxTop="164" Time="0" DmxToPhys="fix"/>
+			<Range SubName="LampOff" DmxBottom="165" DmxTop="171" Time="3000" DmxToPhys="fix"/>
+			<Range SubName="NoFunction" DmxBottom="172" DmxTop="250" Time="0" DmxToPhys="fix"/>
+			<Range SubName="LampOn" DmxBottom="249" DmxTop="255" Time="3000" DmxToPhys="fix"/>
+		</FuncDiscr>
+	</ParameterDefinition>
+</DeviceDescription>

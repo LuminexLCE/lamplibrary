@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="PixelLine 1044" type="RGB_CMY">
+	<SubDevice XmlFile="rgb.xml" Patch="true" Name="PixelLine 1044"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="rgb.xml"/>
+	<SubDevice XmlFile="control.xml"/>
+</MainDevice>

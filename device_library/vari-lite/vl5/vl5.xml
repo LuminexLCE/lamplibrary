@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Vari-Lite" Model="VL5" Firmware=""/>
+	<PhysicalProperties Type="YokeWash">
+	</PhysicalProperties>
+	<ChannelDefinition Align="16">
+		<Channel ChannelNo="1" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1"/>
+		<Channel ChannelNo="3" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3"/>
+		<Channel ChannelNo="5" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="6" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="7" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="8" Name="Beam" Semantic="Beam" Category="Beam"/>
+		<Channel ChannelNo="9" Name="FocusSpeed" Semantic="Focus Speed" Category="Control"/>
+		<Channel ChannelNo="10" Name="CMYSpeed" Semantic="CMY Speed" Category="Control"/>
+		<Channel ChannelNo="11" Name="BeamSpeed" Semantic="Beam Speed" Category="Control"/>
+		<Channel ChannelNo="12" Name="LampCTRL" Semantic="Lamp Control" Category="Control"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

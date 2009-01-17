@@ -1,0 +1,6 @@
+<TypeList Name="Movitec" >
+ <Type Name="SL 250" Location="sl250/" />
+ <Type Name="SL 575" Location="sl575/" />
+ <Type Name="WL 250" Location="wl250/" />
+ <Type Name="WL 575" Location="wl575/" />
+</TypeList>
