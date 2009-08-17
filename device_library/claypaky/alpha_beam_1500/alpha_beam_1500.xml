@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Clay Paky" Model="Alpha Beam 1500"/>
+	<PhysicalProperties Type="YokeSpot">
+		
+		
+		
+	</PhysicalProperties>
+	<ChannelDefinition Align="28">
+		<Channel ChannelNo="1" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="2" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="3" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="4" Name="Colour1" Semantic="Colour Wheel" Category="Colour" DefaultValue="0" MasterChannelNo="3"/>
+		<Channel ChannelNo="5" Name="Shutter" Semantic="Stop / Strobe" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="6" Name="Intensity1" Semantic="Dimmer" Category="Intensity"/>
+		<Channel ChannelNo="7" Name="Intensity1Fine" Semantic="Dimmer Fine" Category="Intensity" MasterChannelNo="6"/>
+		<Channel ChannelNo="8" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="255"/>
+		<Channel ChannelNo="9" Name="Gobo1" Semantic="Static Gobo Wheel" Category="Beam"/>
+		<Channel ChannelNo="10" Name="Gobo2" Semantic="Rotating Gobo Wheel" Category="Beam"/>
+		<Channel ChannelNo="11" Name="Gobo2Rot" Semantic="Gobo Rotation" Category="Beam"/>
+		<Channel ChannelNo="12" Name="Prism1" Semantic="Prism Wheel" Category="Beam"/>
+		<Channel ChannelNo="13" Name="Prism1Rot" Semantic="Prism Rotation" Category="Beam"/>
+		<Channel ChannelNo="14" Name="Frost1" Semantic="Light Frost" Category="Beam"/>
+		<Channel ChannelNo="15" Name="Frost2" Semantic="Medium Frost" Category="Beam"/>
+		<Channel ChannelNo="16" Name="Frost3" Semantic="Heavy Frost" Category="Beam"/>
+		<Channel ChannelNo="17" Name="Focus" Semantic="Focus" Category="Beam"/>
+		<Channel ChannelNo="18" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="19" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" DefaultValue="128" MasterChannelNo="18"/>
+		<Channel ChannelNo="20" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="21" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" DefaultValue="128" MasterChannelNo="20"/>
+		<Channel ChannelNo="22" Name="MSpeed" Semantic="Function" Category="Control"/>
+		<Channel ChannelNo="23" Name="Control" Semantic="Reset" Category="Control"/>
+		<Channel ChannelNo="24" Name="LampCTRL" Semantic="Lamp On/Off" Category="Control"/>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</ChannelDefinition>
+	<DependencyDeclaration>
+		<Dependency Name="Normal Shutter" ChannelName="LampCTRL">
+			<Range Semantic="Normal Shutter Function" DmxBottom="0" DmxTop="31" DmxToPhys="fix"/>
+			<Range Semantic="Normal Shutter Function" DmxBottom="224" DmxTop="255" DmxToPhys="fix"/>
+		</Dependency>
+		<Dependency Name="Lamp assisted strobe" ChannelName="LampCTRL">
+			<Range Semantic="Lamp Assisted Strobes" DmxBottom="32" DmxTop="63" DmxToPhys="fix"/>
+		</Dependency>
+		<Dependency Name="Lamp effects" ChannelName="LampCTRL">
+			<Range Semantic="Lamp Effects" DmxBottom="64" DmxTop="95" DmxToPhys="fix"/>
+		</Dependency>
+		<Dependency Name="Dual dimming" ChannelName="LampCTRL">
+			<Range Semantic="Dual Dimming" DmxBottom="96" DmxTop="127" DmxToPhys="fix"/>
+		</Dependency>
+		<Dependency Name="Electronic dimming" ChannelName="LampCTRL">
+			<Range Semantic="Electronic Dimming" DmxBottom="128" DmxTop="159" DmxToPhys="fix"/>
+		</Dependency>
+		<Dependency Name="Reserved1" ChannelName="LampCTRL">
+			<Range Semantic="Reserved" DmxBottom="160" DmxTop="191" DmxToPhys="fix"/>
+		</Dependency>
+		<Dependency Name="Reserved2" ChannelName="LampCTRL">
+			<Range Semantic="Reserved" DmxBottom="192" DmxTop="223" DmxToPhys="fix"/>
+		</Dependency>
+	</DependencyDeclaration>
+	<ParameterDefinition>
+		<FuncDiscr ChannelName="Pan">
+			<Range Unit="degrees" DmxBottom="0" PhysBottom="-315" DmxTop="255" PhysTop="315" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="PanFine">
+			<Range Unit="degrees" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Tilt">
+			<Range Unit="degrees" DmxBottom="0" PhysBottom="-120" DmxTop="255" PhysTop="120" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="TiltFine">
+			<Range Unit="degrees" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Shutter">
+			<Range SubName="Closed" Semantic="Closed" DmxBottom="0" DmxTop="3" DmxToPhys="fix">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="Strobe" Semantic="Periodic Strobe" DmxBottom="4" DmxTop="103" DmxToPhys="proportionalUp">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="Open" Semantic="Open" DmxBottom="104" DmxTop="107" DmxToPhys="fix">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="RampOpenSnapShut" Semantic="Ramp Open/Snap Shut" DmxBottom="108" DmxTop="207" DmxToPhys="proportionalUp">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="Open" Semantic="Open" DmxBottom="208" DmxTop="212" DmxToPhys="fix">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="RandomRandom" Semantic="Random Slow Strobe" DmxBottom="213" DmxTop="225" DmxToPhys="fix">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="RandomRandom" Semantic="Random Medium Strobe" DmxBottom="226" DmxTop="238" DmxToPhys="fix">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="RandomRampSnap" Semantic="Random Fast Strobe" DmxBottom="239" DmxTop="251" DmxToPhys="fix">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="RandomSnapRamp" Semantic="Random Snap/Ramp" DmxBottom="206" DmxTop="231" DmxToPhys="proportionalUp">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="Open" Semantic="Open" DmxBottom="232" DmxTop="255" DmxToPhys="fix">
+				<Dependency Name="Normal Shutter"/>
+			</Range>
+			<Range SubName="Closed" Semantic="Closed" DmxBottom="0" DmxTop="23" DmxToPhys="fix">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="Strobe" Semantic="Periodic Strobe" DmxBottom="24" DmxTop="49" DmxToPhys="proportionalUp">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="RandomRandom" Semantic="Random/Random Strobe" DmxBottom="50" DmxTop="75" DmxToPhys="proportionalUp">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="RandomSynchronous" Semantic="Random/Synchronous Strobe" DmxBottom="76" DmxTop="101" DmxToPhys="proportionalUp">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="RampOpenSnapShut" Semantic="Ramp Open/Snap Shut" DmxBottom="102" DmxTop="127" DmxToPhys="proportionalUp">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="SnapOpenRampShut" Semantic="Snap Open/Ramp Shut" DmxBottom="128" DmxTop="153" DmxToPhys="proportionalUp">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="RampOpenRampShut" Semantic="Ramp Open/Ramp Shut" DmxBottom="154" DmxTop="179" DmxToPhys="proportionalUp">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="RandomRampSnap" Semantic="Random Ramp/Snap" DmxBottom="180" DmxTop="205" DmxToPhys="proportionalUp">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="RandomSnapRamp" Semantic="Random Snap/Ramp" DmxBottom="206" DmxTop="231" DmxToPhys="proportionalUp">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="Open" Semantic="Open" DmxBottom="232" DmxTop="255" DmxToPhys="fix">
+				<Dependency Name="Lamp assisted strobe"/>
+			</Range>
+			<Range SubName="Closed" Semantic="Closed" DmxBottom="0" DmxTop="23" DmxToPhys="fix">
+				<Dependency Name="Lamp effects"/>
+			</Range>
+			<Range Semantic="Periodic lamp strobes" DmxBottom="24" DmxTop="49" DmxToPhys="fix">
+				<Dependency Name="Lamp effects"/>
+			</Range>
+			<Range Semantic="Random random lamp strobes" DmxBottom="50" DmxTop="75" DmxToPhys="fix">
+				<Dependency Name="Lamp effects"/>
+			</Range>
+			<Range Semantic="Synchronous random lamp strobes" DmxBottom="76" DmxTop="101" DmxToPhys="fix">
+				<Dependency Name="Lamp effects"/>
+			</Range>
+			<Range Semantic="Boost lamp 1.0 second, black" DmxBottom="102" DmxTop="105" DmxToPhys="fix">
+				<Dependency Name="Lamp effects"/>
+			</Range>
+			<Range Semantic="Boost lamp 0.75 second, black" DmxBottom="106" DmxTop="109" DmxToPhys="fix">
+				<Dependency Name="Lamp effects"/>
+			</Range>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Colour1">
+			<Range Semantic="White" DmxBottom="0" DmxTop="18" DmxToPhys="fix"/>
+			<Range Semantic="Red" DmxBottom="19" DmxTop="36" DmxToPhys="fix"/>
+			<Range Semantic="CTO 3200" DmxBottom="37" DmxTop="54" DmxToPhys="fix"/>
+			<Range Semantic="Green" DmxBottom="55" DmxTop="73" DmxToPhys="fix"/>
+			<Range Semantic="Aquamarine" DmxBottom="74" DmxTop="91" DmxToPhys="fix"/>
+			<Range Semantic="Orange" DmxBottom="92" DmxTop="109" DmxToPhys="fix"/>
+			<Range Semantic="Blue" DmxBottom="110" DmxTop="127" DmxToPhys="fix"/>
+			<Range Semantic="Rotation" DmxBottom="128" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+	</ParameterDefinition>
+</DeviceDescription>

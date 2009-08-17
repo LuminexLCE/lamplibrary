@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns="../ns_declarations"
-	targetNamespace="../ns_declarations"
-	elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="../ns_declarations" targetNamespace="../ns_declarations" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:simpleType name="ChanNameType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="Pan"/>
@@ -69,8 +66,14 @@
 			<xs:enumeration value="Iris"/>
 			<xs:enumeration value="IrisFine"/>
 			<xs:enumeration value="IrisSpeed"/>
-			<xs:enumeration value="Frost"/>
-			<xs:enumeration value="FrostFine"/>
+			<xs:enumeration value="Frost1"/>
+			<xs:enumeration value="Frost1Fine"/>
+			<xs:enumeration value="Frost2"/>
+			<xs:enumeration value="Frost2Fine"/>
+			<xs:enumeration value="Frost3"/>
+			<xs:enumeration value="Frost3Fine"/>
+			<xs:enumeration value="Frost4"/>
+			<xs:enumeration value="Frost4Fine"/>
 			<xs:enumeration value="Gobo1"/>
 			<xs:enumeration value="Gobo1Func"/>
 			<xs:enumeration value="Gobo1Rot"/>
