@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsld="../ns_main" xmlns:decl="../ns_declarations" targetNamespace="../ns_main" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:import namespace="../ns_declarations" schemaLocation="../lamplibrary_xml/declarations.xsd"/>
+	<xs:import namespace="../ns_declarations" schemaLocation="./declarations.xsd"/>
 	<xs:element name="MainDevice">
 		<xs:complexType>
 			<xs:sequence maxOccurs="unbounded">

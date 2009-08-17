@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsld="../ns_description" xmlns:decl="../ns_declarations" targetNamespace="../ns_description" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:import namespace="../ns_declarations" schemaLocation="../lamplibrary_xml/declarations.xsd"/>
+	<xs:import namespace="../ns_declarations" schemaLocation="./declarations.xsd"/>
 	<xs:element name="DeviceDescription" type="xsld:DeviceDescrType">
 		<xs:annotation>
 			<xs:documentation>Root element: Device description</xs:documentation>
@@ -105,7 +105,28 @@
 				<xs:documentation>Time to stay in this range to validate the setting, in mili seconds (ms). 0 or not filled in if not applicable</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="Path" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Path to  illustrative media (gobo, colour, video,...)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:attributeGroup>
+	<xs:attributeGroup name="CueChannelGroup">
+		<xs:annotation>
+			<xs:documentation>Group of attributes used to set a channel cue or step</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="ChannelName" type="decl:ChanNameType" use="required"/>
+			
+		
+		<xs:attribute name="DmxValue" type="xs:unsignedByte" use="required"/>
+			
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ChannelTiming">
+		<xs:annotation>
+			<xs:documentation>Channel timing and fade attributes for cues, steps ,...</xs:documentation>
+		</xs:annotation>
+	</xs:attributeGroup>
+	
 	<xs:complexType name="DeviceDescrType">
 		<xs:annotation>
 			<xs:documentation>Type description for root element</xs:documentation>
@@ -404,12 +425,21 @@
 	</xs:complexType>
 	<xs:complexType name="MacroType">
 		<xs:sequence>
-			<xs:element name="MacroStep" maxOccurs="unbounded">
+			<xs:element name="MacroStep" maxOccurs="unbounded" type="xsld:MacroStepType">
 				
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="Name" use="required" type="xs:string">
 			
 		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="MacroStepType">
+		
+		
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="MacroStepChannel" minOccurs="1">
+				
+			</xs:element>
+		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
