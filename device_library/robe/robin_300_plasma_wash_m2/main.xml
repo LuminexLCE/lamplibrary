@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+        ../../../main_device.xsd" Name="Robin 300 Plasma Wash Mode2" type="YokeWash" ShortName="Robin300PLWashm2">
+	<SubDevice XmlFile="robin_300_plasma_wash_m2.xml" Patch="true" Name="Robin 300 Plasma Wash Mode2"/>
+</MainDevice>

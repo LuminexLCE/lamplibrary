@@ -1,9 +1,0 @@
-<TypeList Name="Vari-Lite" >
- <Type Name="VL 2200" Location="vl2200/" />
- <Type Name="VL 2402" Location="vl2402/" />
- <Type Name="VL 2500" Location="vl2500/" />
- <Type Name="VL 3000 spot" Location="vl3000 spot/" />
- <Type Name="VL 3000 wash" Location="vl3000 wash/" />
- <Type Name="VL 3000Q spot" Location="vl3000Q spot/" />
- <Type Name="VL 5" Location="vl5/" />
-</TypeList>

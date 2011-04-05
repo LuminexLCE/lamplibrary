@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="PixelPar 44 4+E" type="RGB" ShortName="PPar44 4+E">
+	<SubDevice XmlFile="pixelpar_44_4e.xml" Patch="true" Name="PixelPar 44 4+E"/>
+</MainDevice>

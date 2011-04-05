@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="PixelArc R 4ch" type="RGB" ShortName="PixelArcR4ch">
+	<SubDevice XmlFile="pixelarc_r_4ch.xml" Patch="true" Name="PixelArc R 4ch"/>
+</MainDevice>

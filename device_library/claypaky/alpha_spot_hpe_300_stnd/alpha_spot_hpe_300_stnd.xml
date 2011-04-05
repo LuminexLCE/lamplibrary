@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Clay Paky" Model="AlphaSpot HPE 300 Stnd" Mode="Standard"/>
+	<PhysicalProperties Type="YokeSpot"/>
+	<ChannelDefinition Align="23">
+		<Channel ChannelNo="1" Name="Cyan" Semantic="Cyan" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="2" Name="Magenta" Semantic="Magenta" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="3" Name="Yellow" Semantic="Yellow" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="Effect1" Semantic="Lens" Category="Beam"/>
+		<Channel ChannelNo="5" Name="Colour1" Semantic="Colour" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="Shutter" Semantic="Shutter" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="7" Name="Intensity1" Semantic="Dimmer" Category="Intensity" HighlightValue="255"/>
+		<Channel ChannelNo="8" Name="Iris" Semantic="Iris" Category="Beam" HighlightValue="255"/>
+		<Channel ChannelNo="9" Name="Gobo1" Semantic="Gobo 1" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Gobo2" Semantic="Gobo 2" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Gobo2Rot" Semantic="Gobo 2 Rot" Category="Beam" BitRes="16" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Gobo2RotFine" Semantic="Gobo 2 Rot Fine" Category="Beam" BitRes="16" ByteNo="0" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Prism1" Semantic="Prism" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="Prism1Rot" Semantic="Prism Rot" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="Frost1" Semantic="Frost" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="16" Name="Focus" Semantic="Focus" Category="Beam"/>
+		<Channel ChannelNo="17" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="18" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="19" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="18"/>
+		<Channel ChannelNo="20" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="21" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="20"/>
+		<Channel ChannelNo="22" Name="Control" Semantic="Reset" Category="Control"/>
+		<Channel ChannelNo="23" Name="LampCTRL" Semantic="Lamp Control" Category="Control"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="RGBC Cell"/>
+	<PhysicalProperties Type="RGB">
+	</PhysicalProperties>
+	<ChannelDefinition Align="4">
+		<Channel ChannelNo="1" Name="Red" Semantic="Red" Category="Colour" BitRes="8" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Green" Semantic="Green" Category="Colour" BitRes="8" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Blue" Semantic="Blue" Category="Colour" BitRes="8" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="CTB" Semantic="CTC" Category="Colour" BitRes="8" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

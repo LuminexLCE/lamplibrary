@@ -1,6 +1,0 @@
-<TypeList Name="Coemar" >
- <Type Name="iWash 575 eb" Location="iWash 575 eb/" />
- <Type Name="iWashLed" Location="iWashLed/" />
- <Type Name="ProWash 250 LX" Location="ProWash 250 LX/" />
- <Type Name="ProWash 575 LX" Location="ProWash 575 LX/" />
-</TypeList>

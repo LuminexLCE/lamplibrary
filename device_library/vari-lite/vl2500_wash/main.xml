@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="VL 2500 Wash" type="YokeWash" ShortName="VL2500Wash">
+	<SubDevice XmlFile="vl2500_wash.xml" Patch="true" Name="VL 2500 Wash"/>
+</MainDevice>

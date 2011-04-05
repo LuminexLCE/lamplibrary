@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Infinity Spot XL 8bits" type="YokeSpot" ShortName="InfinitySpoXL8b">
+	<SubDevice XmlFile="infinity_spotxl_8bits.xml" Patch="true" Name="Infinity Spot XL 8bits"/>
+</MainDevice>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Var*lite" Model="VL 1000" Firmware="" Mode="Extended 16bits"/>
+	<PhysicalProperties Type="YokeSpot">
+		
+		
+		
+	</PhysicalProperties>
+	<ChannelDefinition Align="19">
+		<Channel ChannelNo="1" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="3" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="2"/>
+		<Channel ChannelNo="4" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="5" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="4"/>
+		<Channel ChannelNo="6" Name="Focus" Semantic="Edge" Category="Beam" DefaultValue="0"/><Channel ChannelNo="7" Name="Zoom" Semantic="Zoom" Category="Beam" DefaultValue="0"/><Channel ChannelNo="8" Name="Frost1" Semantic="Diffusion" Category="Beam" DefaultValue="0"/><Channel ChannelNo="9" Name="Blue" Semantic="Blue" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Amber" Semantic="Amber" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		
+		
+		
+		
+		
+		<Channel ChannelNo="12" Name="Gobo1" Semantic="Rotating Gobos" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Gobo1Rot" Semantic="Rot/Pos" Category="Beam" BitRes="16" DefaultValue="0" HighlightValue="0" ByteNo="1"/>
+		<Channel ChannelNo="14" Name="Gobo1RotFine" Semantic="Rot/Pos Fine" Category="Beam" BitRes="16" DefaultValue="0" HighlightValue="0" ByteNo="0" MasterChannelNo="13"/>
+		<Channel ChannelNo="15" Name="Beam" Semantic="Beam" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="16" Name="FocusTime" Semantic="Focus Time" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="17" Name="ColourTime" Semantic="Colour Time" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="18" Name="BeamTime" Semantic="Beam Time" Category="Control" DefaultValue="255"/>
+		
+		<Channel ChannelNo="19" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition> </ParameterDefinition>
+</DeviceDescription>

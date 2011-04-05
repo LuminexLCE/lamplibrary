@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+        ../../../main_device.xsd" Name="ColorSpot 575 AT Mode4" type="YokeSpot" ShortName="ColSpot575ATm4">
+	<SubDevice XmlFile="colorspot_575_at_m4.xml" Patch="true" Name="ColorSpot 575 AT Mode4"/>
+</MainDevice>

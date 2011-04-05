@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
-        ../../../main_device.xsd" Name="Alpha Spot HPE 1200" type="YokeSpot">
-	<SubDevice XmlFile="alpha_spot_hpe_1200.xml" Patch="true" Name="Alpha Spot HPE 1200"/>
-</MainDevice>

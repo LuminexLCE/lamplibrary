@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="PixelLine 110 4+E" type="RGB" ShortName="PL 110 4+E">
+	<SubDevice XmlFile="rgba.xml" Patch="true" Name="PixelLine 110 4+E"/>
+	<SubDevice XmlFile="control.xml" Patch="false"/>
+</MainDevice>

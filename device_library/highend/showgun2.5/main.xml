@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="ShowGun 2.5" type="YokeWash" ShortName="ShowGun2.5">
+	<SubDevice XmlFile="showgun2.5.xml" Patch="true" Name="ShowGun 2.5"/>
+</MainDevice>

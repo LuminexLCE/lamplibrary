@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Generic" Model="RGBW Cell"/>
+	<PhysicalProperties Type="RGB"/>
+	<ChannelDefinition Align="4">
+		<Channel ChannelNo="1" Name="Red" Semantic="Red" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Green" Semantic="Green" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Blue" Semantic="Blue" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="White" Semantic="Amber" Category="Colour" HighlightValue="255"/>
+	</ChannelDefinition>
+</DeviceDescription>

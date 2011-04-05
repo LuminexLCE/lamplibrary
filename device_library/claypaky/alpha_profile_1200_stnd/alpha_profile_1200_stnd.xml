@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Clay Paky" Model="AlphaProfile 1200 Stnd" Mode="Standard"/>
+	<PhysicalProperties Type="YokeSpot"/>
+	<ChannelDefinition Align="32">
+		<Channel ChannelNo="1" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="2" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="3" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="CTO" Semantic="CTO" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Colour1" Semantic="Colour Wheel" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="Shutter" Semantic="Stop / Strobe" Category="Control" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="7" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="8" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="9" Name="Gobo1" Semantic="Static Gobo Wheel" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Gobo2" Semantic="Rotating Gobo Wheel" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Gobo2Rot" Semantic="Gobo Rotation" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Framing1a" Semantic="Blade Up 1" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Framing1b" Semantic="Blade Up 2" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="Framing2a" Semantic="Blade Down 1" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="Framing2b" Semantic="Blade Down 2" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="16" Name="Framing3a" Semantic="Blade Right 1" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="17" Name="Framing3b" Semantic="Blade Right 2" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="18" Name="Framing4a" Semantic="Blade Left 1" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="19" Name="Framing4b" Semantic="Blade Left 2" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="20" Name="FramingRot" Semantic="Framing Rotation" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="21" Name="Effect1" Semantic="Frost/Prism/Animation" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="22" Name="Effect1Rot" Semantic="Prism/Anim Rotation" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="23" Name="Focus" Semantic="Focus" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="24" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="25" Name="Pan" Semantic="Pan" Category="Position" DefaultValue="128"/>
+		<Channel ChannelNo="26" Name="Tilt" Semantic="Tilt" Category="Position" DefaultValue="128"/>
+		<Channel ChannelNo="27" Name="Control" Semantic="Reset" Category="Control"/>
+		<Channel ChannelNo="28" Name="LampCTRL" Semantic="Lamp Control" Category="Control"/>
+		<Channel ChannelNo="29" Name="PanTiltSpeed" Semantic="Pan/Tilt Time" Category="Control"/>
+		<Channel ChannelNo="30" Name="ColourTime" Semantic="Colour Time" Category="Control"/>
+		<Channel ChannelNo="31" Name="BeamTime" Semantic="Beam Time" Category="Control"/>
+		<Channel ChannelNo="32" Name="GoboTime" Semantic="Gobo Time" Category="Control"/>
+	</ChannelDefinition>
+	<DependencyDeclaration> </DependencyDeclaration>
+	<ParameterDefinition/>
+</DeviceDescription>

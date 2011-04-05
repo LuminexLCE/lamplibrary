@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Studio Beam Flat" type="YokeSpot" ShortName="StudioBeamFlat">
+	<SubDevice XmlFile="studio_beam_flat.xml" Patch="true" Name="Studio Beam Flat"/>
+</MainDevice>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+        ../../../main_device.xsd" Name="CP Color 400 CMY 5ch" type="CMY" ShortName="cpcolor400cmy5">
+	<SubDevice XmlFile="cpcolor_400_cmy_5ch.xml" Patch="true" Name="CP Color 400 CMY 5ch"/>
+</MainDevice>

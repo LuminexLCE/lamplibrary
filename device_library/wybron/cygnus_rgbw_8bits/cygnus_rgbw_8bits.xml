@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Wybron" Model="Cygnus" Firmware="1.3" Mode="RGBW 8bits"/>
+	<PhysicalProperties Type="RGB">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>6.6</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>245</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>349</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>212</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>LED</Type>
+			<Power>200</Power>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="7">
+		<Channel ChannelNo="1" Name="Red" Semantic="Red Coarse" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Green" Semantic="Green Coarse" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Blue" Semantic="Blue Coarse" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="White" Semantic="White Coarse" Category="Colour"/>
+		<Channel ChannelNo="5" Name="Strobe" Semantic="Strobe Frequency" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="StrobeDuration" Semantic="Strobe Duration" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="StrobeFx" Semantic="Strobe Effect" Category="Beam" HighlightValue="0"/>
+	</ChannelDefinition>
+</DeviceDescription>

@@ -5,26 +5,26 @@
 	<PhysicalProperties Type="YokeWash">
 		<Weight>
 			<Unit>kg</Unit>
-			<Value>22.7</Value>
+			<Value>11.2</Value>
 		</Weight>
 		<Geometry>
 			<Width>
 				<Unit>mm</Unit>
-				<Value>508</Value>
+				<Value>350</Value>
 			</Width>
 			<Depth>
 				<Unit>mm</Unit>
-				<Value>457</Value>
+				<Value>335</Value>
 			</Depth>
 			<Height>
 				<Unit>mm</Unit>
-				<Value>802</Value>
+				<Value>470</Value>
 			</Height>
 		</Geometry>
 		<Lamp>
 			<Type>Led</Type>
 			<Model>Led</Model>
-			<Power>375</Power>
+			<Power>150</Power>
 			<ColorTemp>6000</ColorTemp>
 		</Lamp>
 	</PhysicalProperties>
@@ -39,27 +39,23 @@
 		<Channel ChannelNo="8" Name="Red" Semantic="Red" Category="Colour" DefaultValue="0"/>
 		<Channel ChannelNo="9" Name="Green" Semantic="Green" Category="Colour" DefaultValue="0"/>
 		<Channel ChannelNo="10" Name="Blue" Semantic="Blue" Category="Colour" DefaultValue="0"/>
-		<Channel ChannelNo="11" Name="Amber" Semantic="White Colour Balance" Category="Colour" DefaultValue="0"/>
-		<Channel ChannelNo="12" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="11" Name="White" Semantic="White Colour Balance" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="12" Name="Control" Semantic="Motor Reset" Category="Control" DefaultValue="0"/>
 	</ChannelDefinition>
-	<DependencyDeclaration>
-		<Dependency Name="Zap / Strobe" ChannelName="Shutter">
-			<Range DmxBottom="11" DmxTop="30" DmxToPhys="proportionalUp" Unit="Hz"/>
-		</Dependency>
-	</DependencyDeclaration>
+	
 	<ParameterDefinition>
 		<FuncDiscr ChannelName="Pan">
-			<Range Unit="degrees" Semantic="Pan" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-180" PhysTop="180"/>
+			<Range Unit="degrees" Semantic="Pan" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-269" PhysTop="269"/>
 		</FuncDiscr>
 		<FuncDiscr ChannelName="Tilt">
-			<Range Unit="degrees" Semantic="Tilt" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-126" PhysTop="126"/>
+			<Range Unit="degrees" Semantic="Tilt" DmxToPhys="proportionalUp" DmxBottom="0" DmxTop="255" PhysBottom="-115" PhysTop="115"/>
 		</FuncDiscr>
 		<FuncDiscr ChannelName="MSpeed">
-			<Range Semantic="Fast" DmxBottom="0" DmxTop="10" DmxToPhys="fix"/>
-			<Range Semantic="Ultra Fast" DmxBottom="11" DmxTop="25" DmxToPhys="fix"/>
-			<Range Semantic="Vect  mode Fast/Slow" DmxBottom="26" DmxTop="127" DmxToPhys="proportionalDown"/>
-			<Range Semantic="Track mode Fast/Slow" DmxBottom="128" DmxTop="247" DmxToPhys="proportionalDown"/>
-			<Range Semantic="Track mode Slow" DmxBottom="248" DmxTop="255" DmxToPhys="fix"/>
+			<Range SubName="MoveSpeed" Semantic="Fast" DmxBottom="0" DmxTop="10" DmxToPhys="fix"/>
+			<Range SubName="MoveSpeedMax" Semantic="Ultra Fast" DmxBottom="11" DmxTop="25" DmxToPhys="fix"/>
+			<Range SubName="MoveSpeedVector" Semantic="Vect  mode Fast/Slow" DmxBottom="26" DmxTop="127" DmxToPhys="proportionalDown"/>
+			<Range SubName="MoveSpeedTrack" Semantic="Track mode Fast/Slow" DmxBottom="128" DmxTop="247" DmxToPhys="proportionalDown"/>
+			<Range SubName="MoveSpeedTrackMin" Semantic="Track mode Slow" DmxBottom="248" DmxTop="255" DmxToPhys="fix"/>
 		</FuncDiscr>
 		<FuncDiscr ChannelName="Intensity1">
 			<Range SubName="Closed" DmxBottom="0" DmxTop="7" DmxToPhys="fix"/>
@@ -86,13 +82,13 @@
 		<FuncDiscr ChannelName="Blue">
 			<Range Semantic="Blue" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
 		</FuncDiscr>
-		<FuncDiscr ChannelName="Amber">
+		<FuncDiscr ChannelName="White">
 			<Range Semantic="White Colour Balance" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
 		</FuncDiscr>
 		<FuncDiscr ChannelName="Control">
 			<Range SubName="NoFunction" Semantic="No Function" DmxBottom="0" DmxTop="100" Time="0" DmxToPhys="fix"/>
-			<Range SubName="PanTiltReset" Semantic="Pan / Tilt Reset" DmxBottom="101" DmxTop="170" Time="0" DmxToPhys="fix"/>
-			<Range SubName="Closed" Semantic="Black-out Movement" DmxBottom="171" DmxTop="200" Time="0" DmxToPhys="fix"/>
+			<Range SubName="ResetPanTilt" Semantic="Pan / Tilt Reset" DmxBottom="101" DmxTop="170" Time="0" DmxToPhys="fix"/>
+			<Range SubName="MoveBlackoutOn" Semantic="Black-out Movement" DmxBottom="171" DmxTop="200" Time="0" DmxToPhys="fix"/>
 			<Range SubName="FanSpeedMax" Semantic="Fan Speed Max" DmxBottom="201" DmxTop="240" Time="0" DmxToPhys="fix"/>
 			<Range SubName="Index" Semantic="Control White Balance" DmxBottom="241" DmxTop="255" Time="0" DmxToPhys="fix"/>
 		</FuncDiscr>

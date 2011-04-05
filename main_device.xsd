@@ -16,8 +16,8 @@
 				</xs:element>
 			</xs:sequence>
 			<xs:attribute name="Name" type="xsld:NameType" use="required"/>
-			<xs:attribute type="decl:KindOfDeviceType" name="type" use="required">
-			</xs:attribute>
+			<xs:attribute type="decl:KindOfDeviceType" name="type" use="required"/>
+			<xs:attribute name="ShortName" type="xsld:ShortNameType" use="optional" />
 		</xs:complexType>
 	</xs:element>
 	<xs:complexType name="SubDeviceType">
@@ -49,6 +49,12 @@
 	<xs:simpleType name="NameType">
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ShortNameType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="16"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:attributeGroup name="PatchGroup">

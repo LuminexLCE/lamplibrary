@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Intellaspot XT-1" type="YokeSpot" ShortName="Intellaspot XT-1">
+	<SubDevice XmlFile="intellaspot_xt1.xml" Patch="true" Name="Intellaspot XT-1"/>
+</MainDevice>

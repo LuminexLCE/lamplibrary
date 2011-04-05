@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Robe" Model="ColorSpot 700E AT" Firmware="1.3" Mode="1"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>32</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>514</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>435</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>586</Value>
+			</Height>
+		</Geometry>
+
+
+
+	</PhysicalProperties>
+	<ChannelDefinition Align="36">
+		<Channel ChannelNo="1" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="3" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3" DefaultValue="128"/>
+		<Channel ChannelNo="5" Name="PanTiltSpeed" Semantic="Pan/Tilt Speed" Category="Control"/>
+		<Channel ChannelNo="6" Name="Control" Semantic="Functions" Category="Control"/>
+		<Channel ChannelNo="7" Name="MacroPan/tilt" Semantic="Pan/Tilt Macro" Category="Position"/>
+		<Channel ChannelNo="8" Name="MacroPan/tiltSpeed" Semantic="Pan/Tilt Macro Speed" Category="Position"/>
+		<Channel ChannelNo="9" Name="Colour1" Semantic="Colour Wheel" Category="Colour" BitRes="16" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Colour1PosFine" Semantic="Colour Wheel fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="9" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Cyan" Semantic="Cyan" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Magenta" Semantic="Magenta" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Yellow" Semantic="Yellow" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="CTO" Semantic="CTO" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="MacroColour" Semantic="CMY Macro" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="16" Name="CMYSpeed" Semantic="CMY-CTO Speed" Category="Control" HighlightValue="0"/>
+		<Channel ChannelNo="17" Name="Effect1" Semantic="Animation Wheel" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="18" Name="Effect1Rot" Semantic="Animation Rotation" Category="Beam"/>
+		<Channel ChannelNo="19" Name="Gobo1" Semantic="Static Gobos" Category="Beam" BitRes="16" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="20" Name="Gobo1Pos" Semantic="Static Gobo Index" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="19"/>
+		<Channel ChannelNo="21" Name="Gobo2" Semantic="Rotating Gobos" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="22" Name="Gobo2Rot" Semantic="Gobo Rotation" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="23" Name="Gobo2RotFine" Semantic="Gobo Fine Index" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="22"/>
+		<Channel ChannelNo="24" Name="Prism1" Semantic="Prism" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="25" Name="Prism1Rot" Semantic="Prism Rotation" Category="Beam"/>
+		<Channel ChannelNo="26" Name="Frost1" Semantic="Frost" Category="Beam" BitRes="16" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="27" Name="Frost1Fine" Semantic="Frost Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="26"/>
+		<Channel ChannelNo="28" Name="Iris" Semantic="Iris" Category="Beam" BitRes="16" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="29" Name="IrisFine" Semantic="Iris Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="28"/>
+		<Channel ChannelNo="30" Name="Zoom" Semantic="Zoom" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="31" Name="ZoomFine" Semantic="Zoom Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="30"/>
+		<Channel ChannelNo="32" Name="Focus" Semantic="Focus" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="33" Name="FocusFine" Semantic="Focus Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="32"/>
+		<Channel ChannelNo="34" Name="Shutter" Semantic="Shutter" Category="Beam" HighlightValue="255"/>
+		<Channel ChannelNo="35" Name="Intensity1" Semantic="Intensity" Category="Intensity" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="36" Name="Intensity1Fine" Semantic="Intensity Fine" Category="Intensity" BitRes="16" ByteNo="0" MasterChannelNo="35"/>
+	</ChannelDefinition>
+
+
+
+	<DependencyDeclaration>
+		<Dependency Name="no rotation" ChannelName="Effect1Rot"><Range Semantic="No Rotation" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/><Range Semantic="No Rotation" DmxBottom="128" DmxTop="129" DmxToPhys="fix"/></Dependency>
+		<Dependency Name="forward rotation" ChannelName="Effect1Rot">
+			<Range Semantic="Forward Rotation" DmxBottom="0" DmxTop="127" DmxToPhys="proportionalDown"/>
+		</Dependency>
+		<Dependency Name="backward rotation" ChannelName="Effect1Rot">
+			<Range Semantic="Backward Rotation" DmxBottom="32" DmxTop="63" DmxToPhys="fix"/>
+		</Dependency>
+		<Dependency Name="speed pulse" ChannelName="Effect1Rot">
+			<Range Semantic="pulse effect" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalDown"/>
+		</Dependency>
+		<Dependency Name="indexing " ChannelName="Effect1Rot">
+			<Range Semantic="indexing" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</Dependency>
+		<Dependency Name="gobo indexing" ChannelName="Gobo2Rot">
+			<Range Semantic="gobo indexing" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</Dependency>
+		<Dependency Name="no gobo rotation" ChannelName="Gobo2Rot">
+			<Range Semantic="no rotation" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/>
+			<Range Semantic="no rotation " DmxBottom="128" DmxTop="129" DmxToPhys="fix"/>
+		</Dependency>
+		<Dependency Name="fw gobo rotation" ChannelName="Gobo2Rot">
+			<Range Semantic="forward rotation" DmxBottom="1" DmxTop="127" DmxToPhys="proportionalDown"/>
+		</Dependency>
+		<Dependency Name="bw gobo rotation" ChannelName="Gobo2Rot">
+			<Range Semantic="backward rotation" DmxBottom="130" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</Dependency>
+	</DependencyDeclaration>
+
+
+	<ParameterDefinition>
+		<FuncDiscr ChannelName="Pan">
+			<Range Unit="degrees" DmxBottom="0" PhysBottom="-265" DmxTop="255" PhysTop="265" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="PanFine">
+			<Range Unit="degrees" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Tilt">
+			<Range Unit="degrees" DmxBottom="0" PhysBottom="-140" DmxTop="255" PhysTop="140" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="TiltFine">
+			<Range Unit="degrees" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="PanTiltSpeed">
+			<Range SubName="MoveSpeedTrackMax" Semantic="Max. Speed Tracking Mode" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/>
+			<Range SubName="MoveSpeedVector" Semantic="Pan/Tilt Speed" DmxBottom="1" DmxTop="255" DmxToPhys="proportionalDown">
+				
+				
+			</Range>
+			<Range SubName="MoveSpeed" Semantic="Pan/Tilt time" DmxBottom="1" DmxTop="255" DmxToPhys="proportionalDown" Unit="sec" PhysBottom="0.1" PhysTop="25.5">
+				
+				
+			</Range>
+
+
+
+
+
+
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Control">
+			<Range Semantic="Reserved" DmxBottom="0" DmxTop="49" DmxToPhys="fix"/>
+			<Range SubName="PanTiltSpeedMode" Semantic="Speed Mode" DmxBottom="50" DmxTop="59" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="PanTiltTimeMode" Semantic="Time Mode" DmxBottom="60" DmxTop="69" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="MoveBlackoutOn" Semantic="Blackout Move" DmxBottom="70" DmxTop="79" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="MoveBlackoutOff" Semantic="Disable Blackout Move" DmxBottom="80" DmxTop="89" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ColorBlackoutOn" Semantic="Blackout Colour" DmxBottom="90" DmxTop="99" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ColorBlackoutOff" Semantic="Disable Blackout Color" DmxBottom="100" DmxTop="109" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="GoboBlackoutOn" Semantic="Blackout Gobo" DmxBottom="110" DmxTop="119" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="GoboBlackoutOff" Semantic="Disable Blackout Gobo" DmxBottom="120" DmxTop="129" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="LampOnReset" Semantic="Lamp On / Reset" DmxBottom="130" DmxTop="139" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ResetPanTilt" Semantic="Pan/Tilt Reset" DmxBottom="140" DmxTop="149" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ResetColours" Semantic="Colours Reset" DmxBottom="150" DmxTop="159" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ResetGobos" Semantic="Gobos Reset" DmxBottom="160" DmxTop="169" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ResetDimmer" Semantic="Dimmer Reset" DmxBottom="170" DmxTop="179" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ResetZoom" Semantic="Zoom Reset" DmxBottom="180" DmxTop="189" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ResetIris" Semantic="Iris Reset" DmxBottom="190" DmxTop="199" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="ResetAll" Semantic="Reset" DmxBottom="200" DmxTop="209" DmxToPhys="fix" Time="3000"/>
+			<Range SubName="LampOff" Semantic="Lamp Off" DmxBottom="230" DmxTop="239" DmxToPhys="fix" Time="3000"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="MacroPan/tilt">
+			<Range SubName="Off" Semantic="Disabled" DmxBottom="0" DmxTop="9" DmxToPhys="fix"/>
+			<Range SubName="Macro_01" Semantic="Circle" DmxBottom="32" DmxTop="63" DmxToPhys="proportionalUp"/>
+			<Range SubName="Macro_02" Semantic="Horizontal Eight" DmxBottom="64" DmxTop="95" DmxToPhys="proportionalUp"/>
+			<Range SubName="Macro_03" Semantic="Vertical Eight" DmxBottom="96" DmxTop="127" DmxToPhys="proportionalUp"/>
+			<Range SubName="Macro_04" Semantic="Rectangle" DmxBottom="128" DmxTop="159" DmxToPhys="proportionalUp"/>
+			<Range SubName="Macro_05" Semantic="Triangle" DmxBottom="160" DmxTop="191" DmxToPhys="proportionalUp"/>
+			<Range SubName="Macro_06" Semantic="Star" DmxBottom="192" DmxTop="223" DmxToPhys="proportionalUp"/>
+			<Range SubName="Macro_07" Semantic="Cross" DmxBottom="224" DmxTop="255" DmxToPhys="proportionalUp"/>
+
+		</FuncDiscr>
+		<FuncDiscr ChannelName="MacroPan/tiltSpeed">
+			<Range SubName="Off" Semantic="No Macro" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/>
+			<Range SubName="Macro_01" Semantic="Macro Fast>Slow" DmxBottom="1" DmxTop="127" DmxToPhys="proportionalDown"/>
+			<Range SubName="Off" Semantic="No Macro" DmxBottom="128" DmxTop="129" DmxToPhys="fix"/>
+			<Range SubName="Macro_02" Semantic="Macro Slow>Fast" DmxBottom="130" DmxTop="255" DmxToPhys="proportionalUp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Colour1">
+			<Range SubName="Open" Semantic="White" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/>
+
+			<Range SubName="Slot_00/01" Semantic="Deep Red" DmxBottom="0" DmxTop="16" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_01/02" Semantic="Deep Blue" DmxBottom="17" DmxTop="32" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_02/03" Semantic="Orange" DmxBottom="33" DmxTop="48" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_03/04" Semantic="Green" DmxBottom="49" DmxTop="64" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_04/05" Semantic="Light Red" DmxBottom="65" DmxTop="80" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_05/06" Semantic="Amber" DmxBottom="81" DmxTop="96" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_06/07" Semantic="UV Filter" DmxBottom="97" DmxTop="112" DmxToPhys="proportionalUp"/>
+
+			<Range SubName="Open" Semantic="White" DmxBottom="128" DmxTop="129" DmxToPhys="fix"/>
+			<Range SubName="Slot_01" Semantic="Deep Red" DmxBottom="130" DmxTop="137" DmxToPhys="fix"/>
+			<Range SubName="Slot_02" Semantic="Deep Blue" DmxBottom="138" DmxTop="145" DmxToPhys="fix"/>
+			<Range SubName="Slot_03" Semantic="Orange" DmxBottom="146" DmxTop="153" DmxToPhys="fix"/>
+			<Range SubName="Slot_04" Semantic="Green" DmxBottom="154" DmxTop="163" DmxToPhys="fix"/>
+			<Range SubName="Slot_05" Semantic="Light Red" DmxBottom="164" DmxTop="171" DmxToPhys="fix"/>
+			<Range SubName="Slot_06" Semantic="Amber" DmxBottom="172" DmxTop="181" DmxToPhys="fix"/>
+			<Range SubName="Slot_07" Semantic="UV Filter" DmxBottom="182" DmxTop="189" DmxToPhys="fix"/>
+			<Range SubName="SpinForward" Semantic="Rainbow Fast>Slow" DmxBottom="190" DmxTop="215" DmxToPhys="proportionalDown"/>
+			<Range SubName="SpinStop" Semantic="No rotation" DmxBottom="216" DmxTop="217" DmxToPhys="fix"/>
+			<Range SubName="SpinBackward" Semantic="Rainbow Slow>Fast" DmxBottom="218" DmxTop="243" DmxToPhys="proportionalUp"/>
+			<Range SubName="RandomRandom" Semantic="Random Audio" DmxBottom="244" DmxTop="249" DmxToPhys="fix"/>
+			<Range Semantic="Auto Randmon Fast>Slow" DmxBottom="250" DmxTop="255" DmxToPhys="proportionalDown"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Cyan">
+			<Range Semantic="Cyan" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Magenta">
+			<Range Semantic="Magenta" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Yellow">
+			<Range Semantic="Yellow" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="MacroColour">
+			<Range SubName="NoFunction" Semantic="NoFunction" DmxBottom="0" DmxTop="7" DmxToPhys="fix"/>
+			<Range SubName="Macro_01" Semantic="Macro_01" DmxBottom="8" DmxTop="15" DmxToPhys="fix"/>
+			<Range SubName="Macro_02" Semantic="Macro_02" DmxBottom="16" DmxTop="23" DmxToPhys="fix"/>
+			<Range SubName="Macro_03" Semantic="Macro_03" DmxBottom="24" DmxTop="31" DmxToPhys="fix"/>
+			<Range SubName="Macro_04" Semantic="Macro_04" DmxBottom="32" DmxTop="39" DmxToPhys="fix"/>
+			<Range SubName="Macro_05" Semantic="Macro_05" DmxBottom="40" DmxTop="47" DmxToPhys="fix"/>
+			<Range SubName="Macro_06" Semantic="Macro_06" DmxBottom="48" DmxTop="55" DmxToPhys="fix"/>
+			<Range SubName="Macro_07" Semantic="Macro_07" DmxBottom="56" DmxTop="63" DmxToPhys="fix"/>
+			<Range SubName="Macro_08" Semantic="Macro_08" DmxBottom="64" DmxTop="71" DmxToPhys="fix"/>
+			<Range SubName="Macro_09" Semantic="Macro_09" DmxBottom="72" DmxTop="79" DmxToPhys="fix"/>
+			<Range SubName="Macro_10" Semantic="Macro_10" DmxBottom="80" DmxTop="87" DmxToPhys="fix"/>
+			<Range SubName="Macro_11" Semantic="Macro_11" DmxBottom="88" DmxTop="95" DmxToPhys="fix"/>
+			<Range SubName="Macro_12" Semantic="Macro_12" DmxBottom="96" DmxTop="103" DmxToPhys="fix"/>
+			<Range SubName="Macro_13" Semantic="Macro_12" DmxBottom="104" DmxTop="111" DmxToPhys="fix"/>
+			<Range SubName="Macro_14" Semantic="Macro_14" DmxBottom="112" DmxTop="119" DmxToPhys="fix"/>
+			<Range SubName="Macro_15" Semantic="Macro_15" DmxBottom="120" DmxTop="127" DmxToPhys="fix"/>
+			<Range SubName="Macro_16" Semantic="Macro_16" DmxBottom="128" DmxTop="135" DmxToPhys="fix"/>
+			<Range SubName="Macro_17" Semantic="Macro_17" DmxBottom="136" DmxTop="143" DmxToPhys="fix"/>
+			<Range SubName="Macro_18" Semantic="Macro_18" DmxBottom="144" DmxTop="151" DmxToPhys="fix"/>
+			<Range SubName="Macro_19" Semantic="Macro_19" DmxBottom="152" DmxTop="159" DmxToPhys="fix"/>
+			<Range SubName="Macro_20" Semantic="Macro_20" DmxBottom="160" DmxTop="167" DmxToPhys="fix"/>
+			<Range SubName="Macro_21" Semantic="Macro_21" DmxBottom="168" DmxTop="175" DmxToPhys="fix"/>
+			<Range SubName="Macro_22" Semantic="Macro_22" DmxBottom="176" DmxTop="183" DmxToPhys="fix"/>
+			<Range SubName="Macro_23" Semantic="Macro_23" DmxBottom="184" DmxTop="191" DmxToPhys="fix"/>
+			<Range SubName="Macro_24" Semantic="Macro_24" DmxBottom="192" DmxTop="199" DmxToPhys="fix"/>
+			<Range SubName="Macro_25" Semantic="Macro_25" DmxBottom="200" DmxTop="207" DmxToPhys="fix"/>
+			<Range SubName="Macro_26" Semantic="Macro_26" DmxBottom="208" DmxTop="215" DmxToPhys="fix"/>
+			<Range SubName="Macro_27" Semantic="Macro_27" DmxBottom="216" DmxTop="223" DmxToPhys="fix"/>
+			<Range SubName="Macro_28" Semantic="Macro_28" DmxBottom="224" DmxTop="231" DmxToPhys="fix"/>
+			<Range SubName="Macro_29" Semantic="Macro_29" DmxBottom="232" DmxTop="239" DmxToPhys="fix"/>
+			<Range SubName="Macro_30" Semantic="Random Rainbow" DmxBottom="240" DmxTop="243" DmxToPhys="proportionalDown"/>
+			<Range Semantic="Macro Audio" DmxBottom="244" DmxTop="249" DmxToPhys="fix"/>
+			<Range SubName="RandomRandom" Semantic="Auto random" DmxBottom="250" DmxTop="255" DmxToPhys="proportionalDown"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Effect1">
+			<Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="31" DmxToPhys="fix"> </Range>
+			<Range Semantic="Horizontal Indexed" DmxBottom="32" DmxTop="47" DmxToPhys="fix">
+				<Dependency Name="indexing"/>
+			</Range>
+			<Range Semantic="Vertical Indexed" DmxBottom="48" DmxTop="63" DmxToPhys="fix">
+				<Dependency Name="indexing"/>
+			</Range>
+			<Range Semantic="Horizontal Rotation" DmxBottom="64" DmxTop="79" DmxToPhys="fix">
+				<Dependency Name="no rotation"/>
+				<Dependency Name="forward rotation"/>
+				<Dependency Name="backward rotation"/>
+			</Range>
+			<Range Semantic="Vertical Rotation" DmxBottom="80" DmxTop="95" DmxToPhys="fix">
+				<Dependency Name="no rotation"/>
+				<Dependency Name="forward rotation"/>
+				<Dependency Name="backward rotation"/>
+			</Range>
+			<Range Semantic="Horizontal Pulse" DmxBottom="96" DmxTop="111" DmxToPhys="fix">
+				<Dependency Name="speed pulse"/>
+			</Range>
+			<Range Semantic="Vertical Pulse" DmxBottom="112" DmxTop="127" DmxToPhys="fix">
+				<Dependency Name="speed pulse"/>
+			</Range>
+			<Range Semantic="Indexed Hor. to Vert." DmxBottom="128" DmxTop="191" DmxToPhys="fix">
+				<Dependency Name="indexing"/>
+			</Range>
+			<Range Semantic="Indexed Vert. to Hor." DmxBottom="192" DmxTop="255" DmxToPhys="fix">
+				<Dependency Name="indexing"/>
+			</Range>
+		</FuncDiscr>
+
+		<FuncDiscr ChannelName="Gobo1">
+			<Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/>
+			<Range SubName="Slot_00/01" Semantic="Gobo 1" DmxBottom="0" DmxTop="7" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_01/02" Semantic="Gobo 2" DmxBottom="8" DmxTop="13" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_02/03" Semantic="Gobo 3" DmxBottom="14" DmxTop="19" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_03/04" Semantic="Gobo 4" DmxBottom="20" DmxTop="26" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_04/05" Semantic="Gobo 5" DmxBottom="27" DmxTop="32" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_05/06" Semantic="Gobo 6" DmxBottom="33" DmxTop="39" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_06/07" Semantic="Gobo 7" DmxBottom="40" DmxTop="45" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_07/08" Semantic="Gobo 8" DmxBottom="46" DmxTop="51" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_08/09" Semantic="Gobo 9" DmxBottom="52" DmxTop="58" DmxToPhys="proportionalUp"/>
+
+			<Range SubName="Open" Semantic="Open" DmxBottom="64" DmxTop="64" DmxToPhys="fix"/>
+			<Range SubName="Slot_01" Semantic="Gobo1" DmxBottom="65" DmxTop="69" DmxToPhys="fix"/>
+			<Range SubName="Slot_02" Semantic="Gobo 2" DmxBottom="70" DmxTop="74" DmxToPhys="fix"/>
+			<Range SubName="Slot_03" Semantic="Gobo 3" DmxBottom="75" DmxTop="79" DmxToPhys="fix"/>
+			<Range SubName="Slot_04" Semantic="Gobo 4" DmxBottom="80" DmxTop="84" DmxToPhys="fix"/>
+			<Range SubName="Slot_05" Semantic="Gobo 5" DmxBottom="85" DmxTop="89" DmxToPhys="fix"/>
+			<Range SubName="Slot_06" Semantic="Gobo 6" DmxBottom="90" DmxTop="94" DmxToPhys="fix"/>
+			<Range SubName="Slot_07" Semantic="Gobo 7" DmxBottom="95" DmxTop="99" DmxToPhys="fix"/>
+			<Range SubName="Slot_08" Semantic="Gobo 8" DmxBottom="100" DmxTop="104" DmxToPhys="fix"/>
+			<Range SubName="Slot_09" Semantic="Gobo 9" DmxBottom="105" DmxTop="109" DmxToPhys="fix"/>
+			<Range SubName="Slot_01_shake" Semantic="Gobo 1 Shake" DmxBottom="110" DmxTop="119" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_02_shake" Semantic="Gobo 2 Shake" DmxBottom="120" DmxTop="129" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_03_shake" Semantic="Gobo 3 Shake" DmxBottom="130" DmxTop="139" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_04_shake" Semantic="Gobo 4 Shake" DmxBottom="140" DmxTop="149" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_05_shake" Semantic="Gobo 5 Shake" DmxBottom="150" DmxTop="159" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_06_shake" Semantic="Gobo 6 Shake" DmxBottom="160" DmxTop="169" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_07_shake" Semantic="Gobo 7 Shake" DmxBottom="170" DmxTop="179" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_08_shake" Semantic="Gobo 8 Shake" DmxBottom="180" DmxTop="189" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_09_shake" Semantic="Gobo 9 Shake" DmxBottom="190" DmxTop="199" DmxToPhys="proportionalUp"/>
+			<Range SubName="Open" Semantic="Open" DmxBottom="200" DmxTop="201" DmxToPhys="fix"/>
+			<Range SubName="SpinForward" Semantic="Forward Rotation" DmxBottom="202" DmxTop="221" DmxToPhys="proportionalDown"/>
+			<Range SubName="SpinStop" Semantic="No rotation" DmxBottom="222" DmxTop="223" DmxToPhys="fix"/>
+			<Range SubName="SpinBackward" Semantic="Backward Rotation" DmxBottom="224" DmxTop="243" DmxToPhys="proportionalUp"/>
+			<Range Semantic="Random Gobo audio" DmxBottom="224" DmxTop="249" DmxToPhys="fix"/>
+			<Range SubName="RandomRandom" Semantic="Auto Random Gobo" DmxBottom="250" DmxTop="255" DmxToPhys="proportionalDown"/>
+
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Gobo2">
+			<Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="3" DmxToPhys="fix"/>
+			<Range SubName="Slot_01" Semantic="Gobo 1" DmxBottom="4" DmxTop="7" DmxToPhys="fix">
+				<Dependency Name="gobo indexing"/>
+			</Range>
+			<Range SubName="Slot_02" Semantic="Gobo 2" DmxBottom="8" DmxTop="11" DmxToPhys="fix">
+				<Dependency Name="gobo indexing"/>
+			</Range>
+			<Range SubName="Slot_03" Semantic="Gobo 3" DmxBottom="12" DmxTop="15" DmxToPhys="fix">
+				<Dependency Name="gobo indexing"/>
+			</Range>
+			<Range SubName="Slot_04" Semantic="Gobo 4" DmxBottom="16" DmxTop="19" DmxToPhys="fix">
+				<Dependency Name="gobo indexing"/>
+			</Range>
+			<Range SubName="Slot_05" Semantic="Gobo 5" DmxBottom="20" DmxTop="23" DmxToPhys="fix">
+				<Dependency Name="gobo indexing"/>
+			</Range>
+			<Range SubName="Slot_06" Semantic="Gobo 6" DmxBottom="24" DmxTop="27" DmxToPhys="fix">
+				<Dependency Name="gobo indexing"/>
+			</Range>
+			<Range SubName="Slot_07" Semantic="Gobo 7" DmxBottom="28" DmxTop="31" DmxToPhys="fix">
+				<Dependency Name="gobo indexing"/>
+			</Range>
+			<Range SubName="Slot_01_rot" Semantic="Gobo 1 Rotation" DmxBottom="32" DmxTop="35" DmxToPhys="fix">
+				<Dependency Name="no gobo rotation"/>
+				<Dependency Name="fw rotation"/>
+				<Dependency Name="bw rotation"/>
+			</Range>
+			<Range SubName="Slot_02_rot" Semantic="Gobo 2 Rotation" DmxBottom="36" DmxTop="39" DmxToPhys="fix">
+				<Dependency Name="no gobo rotation"/>
+				<Dependency Name="fw rotation"/>
+				<Dependency Name="bw rotation"/>
+			</Range>
+			<Range SubName="Slot_03_rot" Semantic="Gobo 3 Rotation" DmxBottom="40" DmxTop="43" DmxToPhys="fix">
+				<Dependency Name="no gobo rotation"/>
+				<Dependency Name="fw rotation"/>
+				<Dependency Name="bw rotation"/>
+			</Range>
+			<Range SubName="Slot_04_rot" Semantic="Gobo 4 Rotation" DmxBottom="44" DmxTop="47" DmxToPhys="fix">
+				<Dependency Name="no gobo rotation"/>
+				<Dependency Name="fw rotation"/>
+				<Dependency Name="bw rotation"/>
+			</Range>
+			<Range SubName="Slot_05_rot" Semantic="Gobo 5 Rotation" DmxBottom="48" DmxTop="51" DmxToPhys="fix">
+				<Dependency Name="no gobo rotation"/>
+				<Dependency Name="fw rotation"/>
+				<Dependency Name="bw rotation"/>
+			</Range>
+			<Range SubName="Slot_06_rot" Semantic="Gobo 6 Rotation" DmxBottom="52" DmxTop="55" DmxToPhys="fix">
+				<Dependency Name="no gobo rotation"/>
+				<Dependency Name="fw rotation"/>
+				<Dependency Name="bw rotation"/>
+			</Range>
+			<Range SubName="Slot_07_rot" Semantic="Gobo 7 Rotation" DmxBottom="56" DmxTop="59" DmxToPhys="fix">
+				<Dependency Name="no gobo rotation"/>
+				<Dependency Name="fw rotation"/>
+				<Dependency Name="bw rotation"/>
+			</Range>
+			<Range SubName="Slot_01_shake" Semantic="Gobo 1 Shake" DmxBottom="60" DmxTop="69" DmxToPhys="proportionalUp"><Dependency Name="gobo indexing"/></Range>
+			<Range SubName="Slot_02_shake" Semantic="Gobo 2 Shake" DmxBottom="70" DmxTop="79" DmxToPhys="proportionalUp"><Dependency Name="gobo indexing"/></Range>
+			<Range SubName="Slot_03_shake" Semantic="Gobo 3 Shake" DmxBottom="80" DmxTop="89" DmxToPhys="proportionalUp"><Dependency Name="gobo indexing"/></Range>
+			<Range SubName="Slot_04_shake" Semantic="Gobo 4 Shake" DmxBottom="90" DmxTop="99" DmxToPhys="proportionalUp"><Dependency Name="gobo indexing"/></Range>
+			<Range SubName="Slot_05_shake" Semantic="Gobo 5 Shake" DmxBottom="100" DmxTop="109" DmxToPhys="proportionalUp"><Dependency Name="gobo indexing"/></Range>
+			<Range SubName="Slot_06_shake" Semantic="Gobo 6 Shake" DmxBottom="110" DmxTop="119" DmxToPhys="proportionalUp"><Dependency Name="gobo indexing"/></Range>
+			<Range SubName="Slot_07_shake" Semantic="Gobo 7 Shake" DmxBottom="120" DmxTop="129" DmxToPhys="proportionalUp"><Dependency Name="gobo indexing"/></Range>
+
+
+
+			<Range SubName="Slot_01_shake" Semantic="Gobo 1 Shake" DmxBottom="130" DmxTop="139" DmxToPhys="proportionalUp"><Dependency Name="no gobo rotation"/><Dependency Name="fw rotation"/><Dependency Name="bw rotation"/></Range>
+			<Range SubName="Slot_02_shake" Semantic="Gobo 2 Shake" DmxBottom="140" DmxTop="149" DmxToPhys="proportionalUp"><Dependency Name="no gobo rotation"/><Dependency Name="fw rotation"/><Dependency Name="bw rotation"/></Range>
+			<Range SubName="Slot_03_shake" Semantic="Gobo 3 Shake" DmxBottom="150" DmxTop="159" DmxToPhys="proportionalUp"><Dependency Name="no gobo rotation"/><Dependency Name="fw rotation"/><Dependency Name="bw rotation"/></Range>
+			<Range SubName="Slot_04_shake" Semantic="Gobo 4 Shake" DmxBottom="160" DmxTop="169" DmxToPhys="proportionalUp"><Dependency Name="no gobo rotation"/><Dependency Name="fw rotation"/><Dependency Name="bw rotation"/></Range>
+			<Range SubName="Slot_05_shake" Semantic="Gobo 5 Shake" DmxBottom="170" DmxTop="179" DmxToPhys="proportionalUp"><Dependency Name="no gobo rotation"/><Dependency Name="fw rotation"/><Dependency Name="bw rotation"/></Range>
+			<Range SubName="Slot_06_shake" Semantic="Gobo 6 Shake" DmxBottom="180" DmxTop="189" DmxToPhys="proportionalUp"><Dependency Name="no gobo rotation"/><Dependency Name="fw rotation"/><Dependency Name="bw rotation"/></Range>
+			<Range SubName="Slot_07_shake" Semantic="Gobo 7 Shake" DmxBottom="190" DmxTop="199" DmxToPhys="proportionalUp"><Dependency Name="no gobo rotation"/><Dependency Name="fw rotation"/><Dependency Name="bw rotation"/></Range>
+			<Range SubName="Open" Semantic="Open" DmxBottom="200" DmxTop="201" DmxToPhys="fix"/>
+			<Range SubName="SpinForward" Semantic="Forward Rotation" DmxBottom="202" DmxTop="221" DmxToPhys="proportionalDown"/>
+			<Range SubName="SpinStop" Semantic="No rotation" DmxBottom="222" DmxTop="223" DmxToPhys="fix"/>
+			<Range SubName="SpinBackward" Semantic="Backward Rotation" DmxBottom="224" DmxTop="243" DmxToPhys="proportionalUp"/>
+			<Range Semantic="Random Gobo audio" DmxBottom="224" DmxTop="249" DmxToPhys="fix"/>
+			<Range SubName="RandomRandom" Semantic="Auto Random Gobo" DmxBottom="250" DmxTop="255" DmxToPhys="proportionalDown"/>
+		</FuncDiscr>
+
+		<FuncDiscr ChannelName="Prism1">
+			<Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="19" DmxToPhys="fix"/>
+			<Range SubName="PrismIn3" Semantic="Prism 3" DmxBottom="20" DmxTop="27" DmxToPhys="fix"/>
+			<Range SubName="Macro_01" Semantic="Macro 1" DmxBottom="128" DmxTop="135" DmxToPhys="fix"/>
+			<Range SubName="Macro_02" Semantic="Macro 2" DmxBottom="136" DmxTop="143" DmxToPhys="fix"/>
+			<Range SubName="Macro_03" Semantic="Macro 3" DmxBottom="144" DmxTop="151" DmxToPhys="fix"/>
+			<Range SubName="Macro_04" Semantic="Macro 4" DmxBottom="152" DmxTop="159" DmxToPhys="fix"/>
+			<Range SubName="Macro_05" Semantic="Macro 5" DmxBottom="160" DmxTop="167" DmxToPhys="fix"/>
+			<Range SubName="Macro_06" Semantic="Macro 6" DmxBottom="168" DmxTop="175" DmxToPhys="fix"/>
+			<Range SubName="Macro_07" Semantic="Macro 7" DmxBottom="176" DmxTop="183" DmxToPhys="fix"/>
+			<Range SubName="Macro_08" Semantic="Macro 8" DmxBottom="184" DmxTop="191" DmxToPhys="fix"/>
+			<Range SubName="Macro_09" Semantic="Macro 9" DmxBottom="192" DmxTop="199" DmxToPhys="fix"/>
+			<Range SubName="Macro_10" Semantic="Macro 10" DmxBottom="200" DmxTop="207" DmxToPhys="fix"/>
+			<Range SubName="Macro_11" Semantic="Macro 11" DmxBottom="208" DmxTop="215" DmxToPhys="fix"/>
+			<Range SubName="Macro_12" Semantic="Macro 12" DmxBottom="216" DmxTop="223" DmxToPhys="fix"/>
+			<Range SubName="Macro_13" Semantic="Macro 13" DmxBottom="224" DmxTop="231" DmxToPhys="fix"/>
+			<Range SubName="Macro_14" Semantic="Macro 14" DmxBottom="232" DmxTop="239" DmxToPhys="fix"/>
+			<Range SubName="Macro_15" Semantic="Macro 15" DmxBottom="240" DmxTop="247" DmxToPhys="fix"/>
+			<Range SubName="Macro_16" Semantic="Macro 16" DmxBottom="248" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Prism1Rot">
+			<Range SubName="Open" Semantic="No rotation" DmxBottom="0" DmxTop="0" DmxToPhys="proportionalUp"/>
+			<Range SubName="RotCW" Semantic="Forward Rotation" DmxBottom="1" DmxTop="127" DmxToPhys="proportionalDown"/>
+			
+			<Range SubName="RotStop" Semantic="No rotation" DmxBottom="128" DmxTop="129" DmxToPhys="fix"/>
+			<Range SubName="RotCCW" Semantic="Backward Rotation" DmxBottom="130" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr><FuncDiscr ChannelName="Frost1"><Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/><Range Semantic="Frost" DmxBottom="1" DmxTop="179" DmxToPhys="proportionalUp"/><Range SubName="Closed" Semantic="Full Frost" DmxBottom="180" DmxTop="189" DmxToPhys="fix"/><Range SubName="SnapOpenRampShut" Semantic="Pulse Closing" DmxBottom="190" DmxTop="211" DmxToPhys="proportionalUp"/><Range SubName="RampOpenSnapShut" Semantic="Pulse Opening" DmxBottom="212" DmxTop="233" DmxToPhys="proportionalDown"/><Range SubName="RampOpenRampShut" Semantic="Ramping" DmxBottom="234" DmxTop="255" DmxToPhys="proportionalDown"/></FuncDiscr><FuncDiscr ChannelName="Iris"><Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/><Range Semantic="Iris" DmxBottom="1" DmxTop="179" DmxToPhys="proportionalDown"/><Range SubName="Closed" Semantic="Closed" DmxBottom="180" DmxTop="191" DmxToPhys="fix"/><Range SubName="RampOpenSnapShut" Semantic="Pulse Opening" DmxBottom="192" DmxTop="219" DmxToPhys="proportionalUp"/><Range SubName="SnapOpenRampShut" Semantic="Pulse Closing" DmxBottom="220" DmxTop="247" DmxToPhys="proportionalDown"/><Range SubName="RandomRampSnap" Semantic="Randmon Pulse Opening Fast" DmxBottom="248" DmxTop="249" DmxToPhys="fix"/><Range Semantic="Randmon Pulse Opening Slow" DmxBottom="250 " DmxTop="251" DmxToPhys="fix"/><Range SubName="RandomSnapRamp" Semantic="Randmon Pulse Closing Fast " DmxBottom="252" DmxTop="253" DmxToPhys="fix"/><Range Semantic="Randmon Pulse Closing Slow" DmxBottom="254" DmxTop="255" DmxToPhys="fix"/></FuncDiscr><FuncDiscr ChannelName="Shutter"><Range SubName="Closed" Semantic="Closed " DmxBottom="0" DmxTop="31" DmxToPhys="fix"/><Range SubName="Open" Semantic="Open" DmxBottom="32" DmxTop="63" DmxToPhys="fix"/><Range SubName="Strobe" Semantic="Strobe" DmxBottom="64" DmxTop="95" DmxToPhys="proportionalUp"/><Range Semantic="Open reduced" DmxBottom="96" DmxTop="127" DmxToPhys="fix"/><Range SubName="RampOpenSnapShut" Semantic="Opening Pulse" DmxBottom="128" DmxTop="143" DmxToPhys="proportionalUp"/><Range SubName="SnapOpenRampShut" Semantic="Closing Pulse" DmxBottom="144" DmxTop="159" DmxToPhys="proportionalDown"/><Range Semantic="Electronic Strobe" DmxBottom="160" DmxTop="191" DmxToPhys="proportionalUp"/><Range SubName="RandomRandom" Semantic="Random Strobe" DmxBottom="192" DmxTop="223" DmxToPhys="proportionalUp"/><Range SubName="Open" Semantic="Open" DmxBottom="224" DmxTop="255" DmxToPhys="fix"/></FuncDiscr>
+		
+		
+		
+	</ParameterDefinition>
+</DeviceDescription>

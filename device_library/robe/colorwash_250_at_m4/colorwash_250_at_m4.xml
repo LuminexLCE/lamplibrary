@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Robe" Model="ColorWash 250 AT" Firmware="1.0" Mode="4"/>
+	<PhysicalProperties Type="YokeWash">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>20.5</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>419</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>438</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>502</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>GY 9.5</Type>
+			<Model>Philips MSD 250/2</Model>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="18">
+		<Channel ChannelNo="1" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="3" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3" DefaultValue="128"/>
+		<Channel ChannelNo="5" Name="PanTiltSpeed" Semantic="Pan/Tilt Speed" Category="Control"/>
+		<Channel ChannelNo="6" Name="Control" Semantic="Power / Special Functions" Category="Control"/>
+		<Channel ChannelNo="7" Name="MacroPan/tilt" Semantic="Pan/Tilt Macro Selection" Category="Position"/>
+		<Channel ChannelNo="8" Name="MacroPan/tiltSpeed" Semantic="Pan/Tilt Macro Speed" Category="Position"/>
+		<Channel ChannelNo="9" Name="Colour1" Semantic="Colour Wheel " Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Cyan" Semantic="Cyan" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Magenta" Semantic="Magenta" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Yellow" Semantic="Yellow" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="CMYSpeed" Semantic="CMY and CTO Speed" Category="Colour"/>
+		<Channel ChannelNo="14" Name="MacroColour" Semantic="CMY Macros" Category="Colour"/>
+		<Channel ChannelNo="15" Name="Effect1" Semantic="Effect Wheel" Category="Beam"/>
+		<Channel ChannelNo="16" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="17" Name="Shutter" Semantic="Shutter" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="18" Name="Intensity1" Semantic="DImmer" Category="Intensity" HighlightValue="255"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

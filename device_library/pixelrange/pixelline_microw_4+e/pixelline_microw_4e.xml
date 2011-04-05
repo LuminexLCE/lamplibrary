@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="PixelRange" Model="MicroW 4+E"/>
+	<PhysicalProperties Type="RGB"/>
+	<ChannelDefinition Align="11">
+		<Channel ChannelNo="1" Name="Red" Semantic="Red" Category="Colour" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Green" Semantic="Green" Category="Colour" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Blue" Semantic="Blue" Category="Colour" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="Amber" Semantic="Amber" Category="Colour" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="5" Name="Effect1" Semantic="Effect 1" Category="Control" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="Effect1Speed" Semantic="Effect 1 Speed" Category="Control" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="Effect1Xfade" Semantic="Effect 1 Xfade" Category="Control" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Effect2" Semantic="Effect 2" Category="Control" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Effect2Speed" Semantic="Effect 2 Speed" Category="Control" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Effect2Xfade" Semantic="Effect 2 Xfade" Category="Control" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Intensity1" Semantic="Effect Master" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

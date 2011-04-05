@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Clay Paky" Model="AlphaSpot 575 16bits" Mode="16bits"/>
+	<PhysicalProperties Type="YokeSpot"/>
+	<ChannelDefinition Align="24">
+		<Channel ChannelNo="1" Name="Colour1" Semantic="Colour Wheel 1" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="2" Name="Colour2" Semantic="Colour Wheel 2" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="3" Name="Shutter" Semantic="Strobe" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="6" Name="Gobo1" Semantic="Rotating Gobos 1" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="Gobo1Rot" Semantic="Gobo 1 Rotation " Category="Beam" BitRes="16" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Gobo2" Semantic="Rotating Gobos 2" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Gobo2Rot" Semantic="Gobo 2 Rotation" Category="Beam" BitRes="16" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Frost1" Semantic="Frost / Prism" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Focus" Semantic="Focus" Category="Beam"/>
+		<Channel ChannelNo="12" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="13" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="14" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="15" Name="Control" Semantic="Reset" Category="Control"/>
+		<Channel ChannelNo="16" Name="LampCTRL" Semantic="Lamp Control" Category="Control"/>
+		<Channel ChannelNo="17" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="13"/>
+		<Channel ChannelNo="18" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="14"/>
+		<Channel ChannelNo="19" Name="Gobo1RotFine" Semantic="Gobo 1 Rot Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="7"/>
+		<Channel ChannelNo="20" Name="Gobo2RotFine" Semantic="Gobo 2 Rot Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="9"/>
+		<Channel ChannelNo="21" Name="PanTiltSpeed" Semantic="Pan/Tilt Time" Category="Control"/>
+		<Channel ChannelNo="22" Name="ColourTime" Semantic="Colour Time" Category="Control"/>
+		<Channel ChannelNo="23" Name="BeamTime" Semantic="Beam Time" Category="Control"/>
+		<Channel ChannelNo="24" Name="GoboTime" Semantic="Gobo Time" Category="Control"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

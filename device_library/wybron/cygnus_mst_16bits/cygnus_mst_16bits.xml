@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Wybron" Model="Cygnus" Firmware="1.3" Mode="Master 16bits"/>
+	<PhysicalProperties Type="RGB">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>6.6</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>245</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>349</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>212</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>LED</Type>
+			<Power>200</Power>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="12">
+		<Channel ChannelNo="1" Name="Red" Semantic="Red Coarse" Category="Colour" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="RedFine" Semantic="Red Fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="1"/>
+		<Channel ChannelNo="3" Name="Green" Semantic="Green Coarse" Category="Colour" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="GreenFine" Semantic="Green Fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="3"/>
+		<Channel ChannelNo="5" Name="Blue" Semantic="Blue Coarse" Category="Colour" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="6" Name="BlueFine" Semantic="Blue Fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="5"/>
+		<Channel ChannelNo="7" Name="Intensity1" Semantic="Intensity Coarse" Category="Intensity" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="8" Name="Intensity1Fine" Semantic="Intensity Fine" Category="Intensity" BitRes="16" ByteNo="0" MasterChannelNo="7"/>
+		<Channel ChannelNo="9" Name="CTO" Semantic="Color Temperature" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Strobe" Semantic="Strobe Frequency" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="StrobeDuration" Semantic="Strobe Duration" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="StrobeFx" Semantic="Strobe Effect" Category="Beam" HighlightValue="0"/>
+	</ChannelDefinition>
+</DeviceDescription>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Clay Paky" Model="AlphaBeam 1500 Stnd" Mode="Standard"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>40</Value>
+		</Weight>
+<Geometry>
+<Width>
+	<Unit>mm</Unit>
+	<Value>500</Value>
+</Width>
+<Depth>
+	<Unit>mm</Unit>
+	<Value>630</Value>
+</Depth>
+<Height>
+	<Unit>mm</Unit>
+	<Value>846</Value>
+</Height>
+</Geometry>
+<Lamp>
+<Type></Type>
+<Model>Osram Lok-it</Model>
+<Power>1500</Power>
+<ColorTemp>6000</ColorTemp>
+</Lamp>
+</PhysicalProperties>
+	<ChannelDefinition Align="24">
+		<Channel ChannelNo="1" Name="Cyan" Semantic="Cyan" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="2" Name="Magenta" Semantic="Magenta" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="3" Name="Yellow" Semantic="Yellow" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="Colour1" Semantic="Colour Wheel" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Shutter" Semantic="Stop / Strobe" Category="Control" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="6" Name="Intensity1" Semantic="Dimmer" Category="Intensity" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="7" Name="Intensity1Fine" Semantic="Dimmer Fine" Category="Intensity" BitRes="16" ByteNo="0" MasterChannelNo="6" HighlightValue="255"/>
+		<Channel ChannelNo="8" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="9" Name="Gobo1" Semantic="Static Gobo Wheel" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Gobo2" Semantic="Rotating Gobo Wheel" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Gobo2Rot" Semantic="Gobo Rotation" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Prism1" Semantic="Prism Wheel" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Prism1Rot" Semantic="Prism Rotation" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="Frost1" Semantic="Light Frost" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="Frost2" Semantic="Medium Frost" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="16" Name="Frost3" Semantic="Heavy Frost" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="17" Name="Focus" Semantic="Focus" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="18" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="19" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" DefaultValue="128" MasterChannelNo="18"/>
+		<Channel ChannelNo="20" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="21" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" DefaultValue="128" MasterChannelNo="20"/>
+		<Channel ChannelNo="22" Name="MSpeed" Semantic="Function" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="23" Name="Control" Semantic="Reset" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="24" Name="LampCTRL" Semantic="Lamp On/Off" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+
+
+
+	<DependencyDeclaration> </DependencyDeclaration>
+
+
+	<ParameterDefinition>
+		<FuncDiscr ChannelName="Pan">
+			<Range Unit="degrees" DmxBottom="0" PhysBottom="-270" DmxTop="255" PhysTop="270" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="PanFine">
+			<Range Unit="degrees" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Tilt">
+			<Range Unit="degrees" DmxBottom="0" PhysBottom="-126" DmxTop="255" PhysTop="126" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="TiltFine">
+			<Range Unit="degrees" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Shutter">
+			<Range SubName="Closed" Semantic="Closed" DmxBottom="0" DmxTop="3" DmxToPhys="fix"/>
+			<Range SubName="Strobe" Semantic="Periodic Strobe" DmxBottom="4" DmxTop="103" DmxToPhys="proportionalUp"/>
+			<Range SubName="Open" Semantic="Open" DmxBottom="104" DmxTop="107" DmxToPhys="fix"/>
+			<Range SubName="RampOpenSnapShut" Semantic="Ramp Open/Snap Shut" DmxBottom="108" DmxTop="207" DmxToPhys="proportionalUp"/>
+			<Range SubName="Open" Semantic="Open" DmxBottom="208" DmxTop="212" DmxToPhys="fix"/>
+			<Range SubName="RandomSlow" Semantic="Random Slow Strobe" DmxBottom="213" DmxTop="225" DmxToPhys="fix"/>
+			<Range SubName="RandomMedium" Semantic="Random Medium Strobe" DmxBottom="226" DmxTop="238" DmxToPhys="fix"/>
+			<Range SubName="RandomFast" Semantic="Random Fast Strobe" DmxBottom="239" DmxTop="251" DmxToPhys="fix"/>
+			<Range SubName="Open" Semantic="Open" DmxBottom="252" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Colour1">
+			<Range SubName="Open" Semantic="White" DmxBottom="0" DmxTop="18" DmxToPhys="fix"/>
+			<Range SubName="Slot_01" Semantic="Red" DmxBottom="19" DmxTop="36" DmxToPhys="fix"/>
+			<Range SubName="Slot_02" Semantic="CTO 3200" DmxBottom="37" DmxTop="54" DmxToPhys="fix"/>
+			<Range SubName="Slot_03" Semantic="Green" DmxBottom="55" DmxTop="73" DmxToPhys="fix"/>
+			<Range SubName="Slot_04" Semantic="Aquamarine" DmxBottom="74" DmxTop="91" DmxToPhys="fix"/>
+			<Range SubName="Slot_05" Semantic="Orange" DmxBottom="92" DmxTop="109" DmxToPhys="fix"/>
+			<Range SubName="Slot_06" Semantic="Blue" DmxBottom="110" DmxTop="127" DmxToPhys="fix"/>
+			<Range SubName="RotCW" Semantic="Rotation" DmxBottom="128" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Iris">
+			<Range SubName="IrisMin" Semantic="Iris Min." DmxBottom="0" DmxTop="0" DmxToPhys="proportionalUp"/><Range SubName="Iris" Semantic="Aperture" DmxBottom="1" DmxTop="127" DmxToPhys="proportionalUp"/>
+			<Range SubName="IrisMax" Semantic="Iris Max." DmxBottom="128" DmxTop="131" DmxToPhys="fix"/><Range SubName="IrisPulse" Semantic="Pulsation" DmxBottom="132" DmxTop="171" DmxToPhys="proportionalUp"/>
+			<Range SubName="SnapOpenRampShut" Semantic="Pulsation-Fast Opening" DmxBottom="172" DmxTop="211" DmxToPhys="proportionalUp"/>
+			<Range SubName="RampOpenSnapShut" Semantic="Pulsation-Fast Closing" DmxBottom="212" DmxTop="251" DmxToPhys="proportionalUp"/>
+			<Range SubName="IrisMax" Semantic="Iris Max." DmxBottom="252" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Gobo1">
+			<Range SubName="Open" Semantic="White" DmxBottom="0" DmxTop="7" DmxToPhys="fix" Path="../gobo_library/cp_gobo_open.png"/>
+			<Range SubName="Slot_01" Semantic="Static Gobo 1" DmxBottom="8" DmxTop="15" DmxToPhys="fix" Path="../gobo_library/cp_gobo7.png"/>
+			<Range SubName="Slot_02" Semantic="Static Gobo 2" DmxBottom="16" DmxTop="23" DmxToPhys="fix" Path="../gobo_library/cp_gobo8.png"/>
+			<Range SubName="Slot_03" Semantic="Static Gobo 3" DmxBottom="24" DmxTop="31" DmxToPhys="fix" Path="../gobo_library/cp_gobo9.png"/>
+			<Range SubName="Slot_04" Semantic="Static Gobo 4" DmxBottom="32" DmxTop="39" DmxToPhys="fix" Path="../gobo_library/cp_gobo10.png"/>
+			<Range SubName="Slot_05" Semantic="Static Gobo 5" DmxBottom="40" DmxTop="47" DmxToPhys="fix" Path="../gobo_library/cp_gobo11.png"/>
+			<Range SubName="Slot_06" Semantic="Static Gobo 6" DmxBottom="48" DmxTop="55" DmxToPhys="fix" Path="../gobo_library/cp_gobo12.png"/>
+			<Range SubName="Slot_07" Semantic="Static Gobo 7" DmxBottom="56" DmxTop="63" DmxToPhys="fix" Path="../gobo_library/cp_gobo13.png"/>
+			<Range SubName="Slot_08" Semantic="Static Gobo 8" DmxBottom="64" DmxTop="71" DmxToPhys="fix" Path="../gobo_library/cp_gobo14.png"/>
+			<Range SubName="RotCW" Semantic="Gobo Rotation Clockwise" DmxBottom="72" DmxTop="113" DmxToPhys="proportionalDown" Unit="RPM" PhysBottom="100" PhysTop="5"/>
+			<Range SubName="RotStop" Semantic="Stop" DmxBottom="114" DmxTop="117" DmxToPhys="fix"/>
+			<Range SubName="RotCCW" Semantic="Gobo Rotation Counter-Clockwise" DmxBottom="118" DmxTop="159" DmxToPhys="proportionalUp" Unit="RPM" PhysBottom="5" PhysTop="100"/>
+			<Range SubName="Slot_01_shake" Semantic="Static Gobo 1 Shake" DmxBottom="160" DmxTop="171" DmxToPhys="proportionalUp" Path="../gobo_library/cp_gobo7.png"/>
+			<Range SubName="Slot_02_shake" Semantic="Static Gobo 2 Shake" DmxBottom="172" DmxTop="183" DmxToPhys="proportionalUp" Path="../gobo_library/cp_gobo8.png"/>
+			<Range SubName="Slot_03_shake" Semantic="Static Gobo 3 Shake" DmxBottom="184" DmxTop="195" DmxToPhys="proportionalUp" Path="../gobo_library/cp_gobo9.png"/>
+			<Range SubName="Slot_04_shake" Semantic="Static Gobo 4 Shake" DmxBottom="196" DmxTop="207" DmxToPhys="proportionalUp" Path="../gobo_library/cp_gobo10.png"/>
+			<Range SubName="Slot_05_shake" Semantic="Static Gobo 5 Shake" DmxBottom="208" DmxTop="219" DmxToPhys="proportionalUp" Path="../gobo_library/cp_gobo11.png"/>
+			<Range SubName="Slot_06_shake" Semantic="Static Gobo 6 Shake" DmxBottom="220" DmxTop="231" DmxToPhys="proportionalUp" Path="../gobo_library/cp_gobo12.png"/>
+			<Range SubName="Slot_07_shake" Semantic="Static Gobo 7 Shake " DmxBottom="232" DmxTop="243" DmxToPhys="proportionalUp" Path="../gobo_library/cp_gobo13.png"/>
+			<Range SubName="Slot_08_shake" Semantic="Static Gobo 8 Shake" DmxBottom="244" DmxTop="255" DmxToPhys="proportionalUp" Path="../gobo_library/cp_gobo14.png"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Gobo2">
+			<Range SubName="Open" Semantic="White" DmxBottom="0" DmxTop="18" DmxToPhys="fix"/>
+			<Range SubName="Slot_01" Semantic="Gobo 1" DmxBottom="19" DmxTop="37" DmxToPhys="fix"/>
+			<Range SubName="Slot_02" Semantic="Gobo 2" DmxBottom="38" DmxTop="55" DmxToPhys="fix"/>
+			<Range SubName="Slot_03" Semantic="Gobo 3" DmxBottom="56" DmxTop="74" DmxToPhys="fix"/>
+			<Range SubName="Slot_04" Semantic="Gobo 4" DmxBottom="75" DmxTop="92" DmxToPhys="fix"/>
+			<Range SubName="Slot_05" Semantic="Gobo 5" DmxBottom="93" DmxTop="111" DmxToPhys="fix"/>
+			<Range SubName="Slot_06" Semantic="Gobo 6" DmxBottom="112" DmxTop="129" DmxToPhys="fix"/>
+			<Range SubName="Slot_01_shake" Semantic="Gobo 1 Shake" DmxBottom="130" DmxTop="150" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_02_shake" Semantic="Gobo 2 Shake" DmxBottom="151" DmxTop="171" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_03_shake" Semantic="Gobo 3 Shake" DmxBottom="172" DmxTop="192" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_04_shake" Semantic="Gobo 4 Shake" DmxBottom="193" DmxTop="213" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_05_shake" Semantic="Gobo 5 Shake" DmxBottom="214" DmxTop="234" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_06_shake" Semantic="Gobo 6 Shake" DmxBottom="235" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Gobo2Rot">
+			<Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/>
+			<Range SubName="Index" Semantic="Index" DmxBottom="1" DmxTop="127" DmxToPhys="proportionalUp" Unit="degrees" PhysBottom="0" PhysTop="540"/>
+			<Range SubName="RotCW" Semantic="Rotation Clockwise" DmxBottom="128" DmxTop="190" DmxToPhys="proportionalDown" Unit="RPM" PhysBottom="150" PhysTop="0.036"/>
+			<Range SubName="RotStop" Semantic="Stop" DmxBottom="191" DmxTop="192" DmxToPhys="fix"/>
+			<Range SubName="RotCCW" Semantic="Rotation Counterclockwise" DmxBottom="193" DmxTop="255" DmxToPhys="proportionalUp" Unit="RPM" PhysBottom="0.036" PhysTop="150"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Prism1">
+			<Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="63" DmxToPhys="fix" Path="../gobo_library/cp_gobo_open.png"/>
+			<Range SubName="PrismIn5" Semantic="5 Faces Prism" DmxBottom="64" DmxTop="127" DmxToPhys="fix" Path="../gobo_library/cp_prism5.png"/>
+			<Range SubName="PrismInCustom1" Semantic="Ovalyser" DmxBottom="128" DmxTop="191" DmxToPhys="fix" Path="../gobo_library/cp_prism_ov.png"/>
+			<Range SubName="PrismIn6" Semantic="6 Faces Prism" DmxBottom="192" DmxTop="255" DmxToPhys="fix" Path="../gobo_library/cp_prism6.png"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Prism1Rot">
+			<Range SubName="Open" Semantic="0°" DmxBottom="0" DmxTop="0" DmxToPhys="proportionalUp"/>
+			<Range SubName="Index" Semantic="Index" DmxBottom="1" DmxTop="127" DmxToPhys="fix" Unit="degrees" PhysBottom="0" PhysTop="540"/>
+			<Range SubName="RotCW" Semantic="Clockwise Rotation" DmxBottom="128" DmxTop="190" DmxToPhys="proportionalDown" Unit="RPM" PhysBottom="150" PhysTop="0.036"/>
+			<Range SubName="RotStop" Semantic="Stop" DmxBottom="191" DmxTop="192" DmxToPhys="fix"/>
+			<Range SubName="RotCCW" Semantic="Counter ClockWise Rotation" DmxBottom="193" DmxTop="255" DmxToPhys="proportionalUp" Unit="RPM" PhysBottom="0.036" PhysTop="150"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="MSpeed">
+			<Range SubName="MoveSpeedMax" Semantic="Pan/Tilt Fast Speed" DmxBottom="13" DmxTop="13" DmxToPhys="fix"/>
+			<Range SubName="MoveSpeedMin" Semantic="Pan/Tilt Normal Speed" DmxBottom="26" DmxTop="26" DmxToPhys="fix"/>
+			<Range SubName="CurveTungsten" Semantic="Conventional Dimmer Curve" DmxBottom="39" DmxTop="39" DmxToPhys="fix"/>
+			<Range SubName="CurveLinear" Semantic="Linear Dimmer Curve" DmxBottom="51" DmxTop="51" DmxToPhys="fix"/>
+			</FuncDiscr>
+		<FuncDiscr ChannelName="Control">
+			<Range SubName="ResetFX" Semantic="Effect Reset" DmxBottom="26" DmxTop="76" DmxToPhys="fix" Time="5000"/>
+			<Range SubName="ResetPanTilt" Semantic="Pan/Tilt Reset" DmxBottom="26" DmxTop="26" DmxToPhys="fix" Time="5000"/>
+			<Range SubName="ResetAll" Semantic="Complete Reset" DmxBottom="39" DmxTop="39" DmxToPhys="fix" Time="5000"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="LampCTRL">
+			<Range SubName="LampOff" Semantic="Lamp Off" DmxBottom="26" DmxTop="100" DmxToPhys="fix" Time="5000"/>
+			<Range SubName="LampOn/Half" Semantic="Lamp On Half Power" DmxBottom="101" DmxTop="179" DmxToPhys="fix" Time="5000"/>
+			<Range SubName="LampOn" Semantic="Lamp On" DmxBottom="190" DmxTop="255" DmxToPhys="fix" Time="5000"/>
+		</FuncDiscr>
+	</ParameterDefinition>
+</DeviceDescription>

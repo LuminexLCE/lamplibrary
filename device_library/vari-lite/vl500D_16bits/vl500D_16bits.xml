@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Var*lite" Model="VL 500D" Firmware="" Mode="16bits"/>
+	<PhysicalProperties Type="YokeWash">
+		
+		
+		<Lamp>
+			<Type>Hallogen</Type>
+			<Model>1200W Tungsten Halogen Lamp</Model>
+			<Power>1200</Power>
+			<ColorTemp>3200</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="10">
+		<Channel ChannelNo="1" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="3" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="2"/>
+		<Channel ChannelNo="4" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="5" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="4"/>
+		<Channel ChannelNo="6" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Frost1" Semantic="Diffuser" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		
+		
+		
+		
+		
+		<Channel ChannelNo="10" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</ParameterDefinition>
+</DeviceDescription>

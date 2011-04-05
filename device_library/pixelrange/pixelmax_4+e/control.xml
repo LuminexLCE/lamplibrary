@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="PixelRange" Model="Control"/>
+	<PhysicalProperties Type="Control">
+	</PhysicalProperties>
+	<ChannelDefinition Align="7">
+		<Channel ChannelNo="1" Name="Effect1" Semantic="Effect 1" Category="Control"/>
+		<Channel ChannelNo="2" Name="Effect1Speed" Semantic="Effect 1 Speed" Category="Control"/>
+		<Channel ChannelNo="3" Name="Effect1Xfade" Semantic="Effect 1 Xfade" Category="Control"/>
+		<Channel ChannelNo="4" Name="Effect2" Semantic="Effect 2" Category="Control"/>
+		<Channel ChannelNo="5" Name="Effect2Speed" Semantic="Effect 2 Speed" Category="Control"/>
+		<Channel ChannelNo="6" Name="Effect2Xfade" Semantic="Effect 2 Xfade" Category="Control"/>
+		<Channel ChannelNo="7" Name="Intensity1" Semantic="Master Intensity" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

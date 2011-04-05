@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Studio Spot 575 CMY Zoom" type="YokeSpot" ShortName="SSpot575cmyzoom">
+	<SubDevice XmlFile="studio_spot_575_cmy_zoom.xml" Patch="true" Name="Studio Spot 575 CMY Zoom"/>
+</MainDevice>

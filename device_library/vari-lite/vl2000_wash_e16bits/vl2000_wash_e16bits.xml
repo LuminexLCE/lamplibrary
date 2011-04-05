@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Var*lite" Model="VL2000 Wash" Firmware="" Mode="Enhanced 16Bits"/>
+	<PhysicalProperties Type="YokeWash">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>22.7</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>438</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>438</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>645</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>Metal Halide</Type>
+			<Model>700 W Metal Halide</Model>
+			<Power>700</Power>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="15">
+		<Channel ChannelNo="1" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="3" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="2"/>
+		<Channel ChannelNo="4" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="5" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="4"/>
+		<Channel ChannelNo="6" Name="Blue" Semantic="Blue" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="Amber" Semantic="Amber" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Colour1" Semantic="Colour Wheel" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Frost1" Semantic="Diffusion" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Shutter" Semantic="Strobe" Category="Beam" DefaultValue="3" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="FocusTime" Semantic="Focus Time" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="13" Name="ColourTime" Semantic="Colour Time" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="14" Name="BeamTime" Semantic="Beam Time" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="15" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+        ../../../main_device.xsd" Name="AlphaWash 1500 LT Stnd" type="YokeWash" ShortName="AWash1500ltstnd">
+	<SubDevice XmlFile="alpha_wash_1500lt_stnd.xml" Patch="true" Name="Alpha Wash 1500 LT Stnd"/>
+</MainDevice>

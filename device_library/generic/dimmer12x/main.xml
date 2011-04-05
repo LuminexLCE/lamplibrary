@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="Dimmer12x" type="Dimmer" ShortName="Dimmer12x">
+	<SubDevice XmlFile="dimmer.xml" Patch="true" Name="Dimmer12x"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+	<SubDevice XmlFile="dimmer.xml"/>
+</MainDevice>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+        ../../../main_device.xsd" Name="ColorWash 700E AT Mode3" type="YokeWash" ShortName="ColWash700EATm3">
+	<SubDevice XmlFile="colorwash_700_eat_m3.xml" Patch="true" Name="ColorWash 700E AT Mode3"/>
+</MainDevice>

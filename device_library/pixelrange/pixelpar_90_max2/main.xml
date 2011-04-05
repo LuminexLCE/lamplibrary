@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="PixelPar 90 Max2" type="RGB" ShortName="PPar90 Max2">
+	<SubDevice XmlFile="pixelpar_90_max2.xml" Patch="true" Name="PixelPar 90 Max2"/>
+</MainDevice>

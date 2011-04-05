@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="Exterior 600" Firmware="" Mode="1"/>
+	<PhysicalProperties Type="CMY">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>48</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>375</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>636</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>421</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>MSD</Type>
+			<Model>philips MSD 575</Model>
+			<Power>575</Power>
+			<ColorTemp>6000</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="9">
+		<Channel ChannelNo="1" Name="Shutter" Semantic="Shutter" Category="Beam" DefaultValue="20" HighlightValue="20"/>
+		<Channel ChannelNo="2" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="Colour1" Semantic="Colour" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="BeamAngle" Semantic="Beam Shaper" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="8" Name="Zoom" Semantic="Zoom" Category="Beam" DefaultValue="0"/>
+		
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition>	<FuncDiscr ChannelName="Shutter">
+		<Range SubName="Closed" Semantic="Closed" DmxBottom="0" DmxTop="19" DmxToPhys="fix"/>
+		<Range SubName="Open" Semantic="Open" DmxBottom="20" DmxTop="49" DmxToPhys="fix"/>
+		<Range SubName="Strobe" Semantic="Strobe Fast>Slow" DmxBottom="50" DmxTop="112" DmxToPhys="proportionalDown"/>
+		<Range SubName="Closed" Semantic="Closed" DmxBottom="113" DmxTop="127" DmxToPhys="fix"/>
+		<Range SubName="RandomFast" Semantic="Random Strobe Fast" DmxBottom="128" DmxTop="147" DmxToPhys="fix"/>
+		<Range SubName="RandomMedium" Semantic="Random Stroe Medium" DmxBottom="148" DmxTop="167" DmxToPhys="fix"/><Range SubName="RandomSlow" Semantic="Random Stroe Slow" DmxBottom="168" DmxTop="187" DmxToPhys="fix"/><Range SubName="Closed" Semantic="Closed" DmxBottom="188" DmxTop="207" DmxToPhys="fix"/><Range SubName="Reset" Semantic="Reset" DmxBottom="208" DmxTop="217" DmxToPhys="fix"/><Range SubName="Closed" Semantic="Closed" DmxBottom="218" DmxTop="227" DmxToPhys="fix"/><Range SubName="LampOn" Semantic="Lamp On" DmxBottom="228" DmxTop="237" DmxToPhys="fix"/><Range SubName="Closed" Semantic="Closed" DmxBottom="238" DmxTop="247" DmxToPhys="fix"/><Range SubName="LampOff" Semantic="Lamp Off" DmxBottom="248" DmxTop="255" DmxToPhys="fix" Time="6000"/>
+	</FuncDiscr>
+		<FuncDiscr ChannelName="Intensity1">
+			<Range DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+			
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Cyan">
+			<Range DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Magenta">
+			<Range DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Yellow">
+			<Range DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Colour1">
+			<Range SubName="Slot_00/01" Semantic="White > Color1" DmxBottom="0" DmxTop="40" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_01/02" Semantic="Color1 > Color2" DmxBottom="40" DmxTop="80" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_02/03" Semantic="Color2 > Color3" DmxBottom="80" DmxTop="120" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_03/04" Semantic="Color3 > Color4" DmxBottom="120" DmxTop="160" DmxToPhys="proportionalUp"/>
+			<Range SubName="Slot_04" Semantic="Color4- Blue" DmxBottom="161" DmxTop="165" DmxToPhys="fix"/>
+			<Range SubName="Slot_03" Semantic="Color3- Green" DmxBottom="166" DmxTop="170" DmxToPhys="fix"/>
+			<Range SubName="Slot_02" Semantic="Color2 - Red" DmxBottom="171" DmxTop="175" DmxToPhys="fix"/>
+			<Range SubName="Slot_01" Semantic="Color1 - CTC" DmxBottom="176" DmxTop="180" DmxToPhys="fix"/>
+			<Range SubName="Open" Semantic="White" DmxBottom="181" DmxTop="185" DmxToPhys="fix"/>
+			<Range SubName="RotCW" Semantic="CW Rot." DmxBottom="186" DmxTop="214" DmxToPhys="proportionalDown"/>
+			<Range SubName="RotCCW" Semantic="CCW Rot." DmxBottom="215" DmxTop="243" DmxToPhys="proportionalUp"/>
+			<Range SubName="RandomFast" Semantic="Random Color Fast" DmxBottom="244" DmxTop="247" DmxToPhys="fix"/>
+			<Range SubName="RandomMedium" Semantic="Random Color Medium" DmxBottom="248" DmxTop="251" DmxToPhys="fix"/><Range SubName="RandomSlow" Semantic="Random Color Slow" DmxBottom="252" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="BeamAngle">
+			<Range SubName="Open" Semantic="Open" DmxBottom="0" DmxTop="2" DmxToPhys="fix"/>
+			<Range Semantic="Shape Left>Right" DmxBottom="3" DmxTop="170" DmxToPhys="proportionalUp"/>
+			<Range Semantic="Frost" DmxBottom="171" DmxTop="255" DmxToPhys="proportionalUp"/>
+			
+		</FuncDiscr><FuncDiscr ChannelName="Zoom">
+			<Range Semantic="Zoom" DmxBottom="0" DmxTop="255" DmxToPhys="proportionalDown"/>
+			
+			
+			
+		</FuncDiscr>
+	</ParameterDefinition>
+</DeviceDescription>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Infinity Wash M" type="YokeWash" ShortName="InfinityWashM">
+	<SubDevice XmlFile="infinity_washm.xml" Patch="true" Name="Infinity Wash M"/>
+</MainDevice>

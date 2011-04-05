@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Clay Paky" Model="AlphaSpot  700 Standard" Mode="Standard"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>35.4</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>440</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>480</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>750</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>MSR</Type>
+			<Model>OSRAM HTI 700W/D4/60</Model>
+			<Power>700</Power>
+			<ColorTemp>7200</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="24">
+		<Channel ChannelNo="1" Name="Cyan" Semantic="Cyan" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="2" Name="Magenta" Semantic="Magenta" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="3" Name="Yellow" Semantic="Yellow" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="CTO" Semantic="CTO" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Colour1" Semantic="Colour" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="Shutter" Semantic="Shutter" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="7" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="8" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="9" Name="Gobo1" Semantic="Fixed Gobos" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Gobo2" Semantic="Rotating Gobos" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Gobo2Rot" Semantic="Gobo Rotation" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Effect1" Semantic="Graphic Disc Insert" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Effect1Rot" Semantic="Graphic Disc Rotation" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="Frost1" Semantic="Frost" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="Focus" Semantic="Focus" Category="Beam"/>
+		<Channel ChannelNo="16" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="17" Name="Pan" Semantic="Pan" Category="Position" DefaultValue="128"/>
+		<Channel ChannelNo="18" Name="Tilt" Semantic="Tilt" Category="Position" DefaultValue="128"/>
+		<Channel ChannelNo="19" Name="Control" Semantic="Reset" Category="Control"/>
+		<Channel ChannelNo="20" Name="LampCTRL" Semantic="Lamp Control" Category="Control"/>
+		<Channel ChannelNo="21" Name="PanTiltSpeed" Semantic="Pan Tilt Time" Category="Control"/>
+		<Channel ChannelNo="22" Name="ColourTime" Semantic="Colour TIme" Category="Control"/>
+		<Channel ChannelNo="23" Name="BeamTime" Semantic="Beam TIme" Category="Control"/>
+		<Channel ChannelNo="24" Name="GoboTime" Semantic="Gobo Time" Category="Control"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

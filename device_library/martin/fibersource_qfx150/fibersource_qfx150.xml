@@ -2,7 +2,7 @@
 <DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
 	../../../device_description.xsd">
 	<ManufacturerInfo Manufacturer="Martin" Model="Fibersource qfx 150" Firmware=""/>
-	<PhysicalProperties Type="Effect">
+	<PhysicalProperties Type="Scroller">
 		<Weight>
 			<Unit>kg</Unit>
 			<Value>10.4</Value>
@@ -14,16 +14,16 @@
 			</Width>
 			<Depth>
 				<Unit>mm</Unit>
-				<Value>199</Value>
+				<Value>330</Value>
 			</Depth>
 			<Height>
 				<Unit>mm</Unit>
-				<Value>330</Value>
+				<Value>199</Value>
 			</Height>
 		</Geometry>
 		<Lamp>
 			<Type>HQI-R</Type>
-			<Model>Osram HQR-R 150</Model>
+			<Model>Osram HQI-R 150</Model>
 			<Power>150</Power>
 			<ColorTemp>4200</ColorTemp>
 		</Lamp>

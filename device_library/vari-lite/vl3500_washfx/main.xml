@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="VL 3500 Wash FX Enhanced 16bits" type="YokeWash" ShortName="VL3500WashFX">
+	<SubDevice XmlFile="vl3500_washfx_e16bits.xml" Patch="true" Name="VL 3500 Wash FX Enhanced 16bits"/>
+</MainDevice>

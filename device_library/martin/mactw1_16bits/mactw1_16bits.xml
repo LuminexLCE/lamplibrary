@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="Mac TW1 16bits" Mode="16bits"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>27.4</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>362</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>454</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>709</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>Tungsten</Type>
+			<Model>Philips 1200/115</Model>
+			<Power>1200</Power>
+			<ColorTemp>0</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="14">
+		<Channel ChannelNo="1" Name="Shutter" Semantic="Shutter" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Intensity1" Semantic="Electronic Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Intensity2" Semantic="Mechanical Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="Cyan" Semantic="Cyan" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Magenta" Semantic="Magenta" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="Yellow" Semantic="Yellow" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="8" Name="Pan" Semantic="Pan Coarse" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="9" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="8"/>
+		<Channel ChannelNo="10" Name="Tilt" Semantic="Tilt Coarse" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="11" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="10"/>
+		<Channel ChannelNo="12" Name="PanTiltSpeed" Semantic="Pan/Tilt Speed" Category="Control"/>
+		<Channel ChannelNo="13" Name="MSpeed" Semantic="Effect Speed" Category="Control"/>
+		<Channel ChannelNo="14" Name="Control" Semantic="Fixture Calibration" Category="Control"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

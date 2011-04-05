@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
-    ../../../main_device.xsd" Name="ProWash 250 LX" type="YokeWash">
+    ../../../main_device.xsd" Name="ProWash 250 LX" type="YokeWash" ShortName="ProWash250LX">
 	<SubDevice XmlFile="prowash_250_lx.xml" Patch="true" Name="ProWash 250 LX"/>
 </MainDevice>
