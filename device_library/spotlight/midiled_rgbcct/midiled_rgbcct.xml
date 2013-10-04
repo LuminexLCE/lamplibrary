@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="MIDI LED" Mode="RGB+CCT"/>
+	<PhysicalProperties Type="YokeWash">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>0</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>0</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>0</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>0</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>LED</Type>
+			<Model>0</Model>
+			<Power>0</Power>
+			<ColorTemp>0</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="8">
+		<Channel ChannelNo="1" Name="Intensity1" Semantic="Shutter" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Red" Semantic="Red" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Green" Semantic="Green" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="Blue" Semantic="Blue" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="5" Name="White" Semantic="White" Category="Colour" HighlightValue="255"/>
+		<Channel ChannelNo="6" Name="CTO" Semantic="CTO" Category="Colour"/>
+		<Channel ChannelNo="7" Name="Strobe" Semantic="Strobe" Category="Beam"/>
+		<Channel ChannelNo="8" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

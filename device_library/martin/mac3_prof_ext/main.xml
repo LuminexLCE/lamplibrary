@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Mac III Profile Extended" type="YokeSpot" ShortName="Mac3ProfExt">
+	<SubDevice XmlFile="mac3_prof_ext.xml" Patch="true" Name="Mac III Profile Extended"/>
+</MainDevice>

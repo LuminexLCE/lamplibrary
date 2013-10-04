@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Mac 301 Wash Stnd 8bits" type="YokeWash" ShortName="Mac301Stnd8b">
+	<SubDevice XmlFile="mac301_wash_stnd_8bits.xml" Patch="true" Name="Mac 301 Stnd 8bits"/>
+</MainDevice>
