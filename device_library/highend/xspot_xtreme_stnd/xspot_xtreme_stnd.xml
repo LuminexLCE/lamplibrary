@@ -69,7 +69,9 @@
 		<Channel ChannelNo="38" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="255" HighlightValue="255"/>
 	</ChannelDefinition>
 	<DependencyDeclaration>
-		<Dependency Name="Control" ChannelName="Shutter"><Range Semantic="Enable Control Channel" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/></Dependency>
+		<Dependency Name="Control" ChannelName="Shutter">
+			<Range Semantic="Enable Control Channel" DmxBottom="0" DmxTop="0" DmxToPhys="fix"/>
+		</Dependency>
 		<Dependency Name="Normal Shutter" ChannelName="LampCTRL">
 			<Range Semantic="Normal Shutter Function" DmxBottom="0" DmxTop="31" DmxToPhys="fix"/>
 			<Range Semantic="Normal Shutter Function" DmxBottom="224" DmxTop="255" DmxToPhys="fix"/>
@@ -391,7 +393,17 @@
 			<Range SubName="Slot_06" Semantic="Gobo6" DmxBottom="176" DmxTop="207" DmxToPhys="fix"/>
 			<Range SubName="Slot_07" Semantic="Gobo7" DmxBottom="208" DmxTop="239" DmxToPhys="fix"/>
 			<Range SubName="Open" Semantic="Open" DmxBottom="240" DmxTop="255" DmxToPhys="fix"/>
-		</FuncDiscr><FuncDiscr ChannelName="Gobo1Func"><Range SubName="Index" Semantic="Indexed" DmxBottom="0" DmxTop="15" DmxToPhys="fix"/><Range SubName="RotCW" Semantic="Forward Rot." DmxBottom="16" DmxTop="31" DmxToPhys="fix"/><Range SubName="RotCW" Semantic="Reverse Rot." DmxBottom="32" DmxTop="47" DmxToPhys="fix"/><Range Semantic="Scan" DmxBottom="48" DmxTop="63" DmxToPhys="fix"/><Range Semantic="Random" DmxBottom="64" DmxTop="79" DmxToPhys="fix"/><Range Semantic="Blink" DmxBottom="80" DmxTop="95" DmxToPhys="fix"/><Range Semantic="TBC" DmxBottom="96" DmxTop="111" DmxToPhys="fix"/><Range Semantic="Continuous" DmxBottom="112" DmxTop="127" DmxToPhys="fix"/></FuncDiscr>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Gobo1Func">
+			<Range SubName="Index" Semantic="Indexed" DmxBottom="0" DmxTop="15" DmxToPhys="fix"/>
+			<Range SubName="RotCW" Semantic="Forward Rot." DmxBottom="16" DmxTop="31" DmxToPhys="fix"/>
+			<Range SubName="RotCW" Semantic="Reverse Rot." DmxBottom="32" DmxTop="47" DmxToPhys="fix"/>
+			<Range Semantic="Scan" DmxBottom="48" DmxTop="63" DmxToPhys="fix"/>
+			<Range Semantic="Random" DmxBottom="64" DmxTop="79" DmxToPhys="fix"/>
+			<Range Semantic="Blink" DmxBottom="80" DmxTop="95" DmxToPhys="fix"/>
+			<Range Semantic="TBC" DmxBottom="96" DmxTop="111" DmxToPhys="fix"/>
+			<Range Semantic="Continuous" DmxBottom="112" DmxTop="127" DmxToPhys="fix"/>
+		</FuncDiscr>
 		<FuncDiscr ChannelName="Gobo1RotFunc">
 			<Range SubName="Index" Semantic="Indexed" DmxBottom="0" DmxTop="15" DmxToPhys="fix"/>
 			<Range SubName="RotCW" Semantic="Forward Rot." DmxBottom="16" DmxTop="31" DmxToPhys="fix"/>

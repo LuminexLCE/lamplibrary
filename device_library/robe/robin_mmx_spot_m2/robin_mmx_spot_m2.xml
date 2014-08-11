@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Robe" Model="Robin MMX Spot" Firmware="" Mode="2"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>25.5</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>446</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>530</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>722</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>MSR</Type>
+			<Model>Philips MSR Platinium 35</Model>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="31">
+		<Channel ChannelNo="1" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="3" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3" DefaultValue="128"/>
+		<Channel ChannelNo="5" Name="PanTiltSpeed" Semantic="Pan/Tilt Speed" Category="Control"/>
+		<Channel ChannelNo="6" Name="Control" Semantic="Power / Special Functions" Category="Control"/>
+		<Channel ChannelNo="7" Name="Colour1" Semantic="Colour Wheel" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Cyan" Semantic="Cyan" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Magenta" Semantic="Magenta" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Yellow" Semantic="Yellow" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="CTO" Semantic="CTO" Category="Colour"/>
+		<Channel ChannelNo="12" Name="MacroColour" Semantic="CMY Macro" Category="Colour"/>
+		<Channel ChannelNo="13" Name="CMYCtrl" Semantic="Effect Speed" Category="Control"/>
+		<Channel ChannelNo="14" Name="Effect1" Semantic="Dual Graphic Wheel Positioning" Category="Beam"/>
+		<Channel ChannelNo="15" Name="Effect1Rot" Semantic="Dual Graphic Wheel1 Rotation" Category="Beam"/>
+		<Channel ChannelNo="16" Name="Effect2Rot" Semantic="Dual Graphic Wheel2 Rotation" Category="Beam"/>
+		<Channel ChannelNo="17" Name="Effect1Func" Semantic="Dual Graphic Wheel animations" Category="Beam"/>
+		<Channel ChannelNo="18" Name="Gobo1" Semantic="Gobo Wheel1" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="19" Name="Gobo1Rot" Semantic="Gobo Wheel1 index &amp; rot." Category="Beam"/>
+		<Channel ChannelNo="20" Name="Gobo2" Semantic="Gobo Wheel2" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="21" Name="Gobo2Rot" Semantic="Gobo Wheel2 index &amp; rot." Category="Beam"/>
+		<Channel ChannelNo="22" Name="Prism1" Semantic="Prism" Category="Beam"/>
+		<Channel ChannelNo="23" Name="Prism1Rot" Semantic="Prism Rotation" Category="Beam"/>
+		<Channel ChannelNo="24" Name="Frost1" Semantic="Frost" Category="Beam"/>
+		<Channel ChannelNo="25" Name="Iris" Semantic="Iris" Category="Beam"/>
+		<Channel ChannelNo="26" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="27" Name="Focus" Semantic="Focus" Category="Beam"/>
+		<Channel ChannelNo="28" Name="FocusCtrl" Semantic="AutoFocus" Category="Beam"/>
+		<Channel ChannelNo="29" Name="BeamAngle" Semantic="Hot-Spot" Category="Beam"/>
+		<Channel ChannelNo="30" Name="Shutter" Semantic="Shutter / Strobe" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="31" Name="Intensity1" Semantic="Intensity" Category="Intensity" HighlightValue="255"/>
+		
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

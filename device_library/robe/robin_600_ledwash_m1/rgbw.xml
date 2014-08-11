@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Robe" Model="RGB Cell"/>
+	<PhysicalProperties Type="RGB">
+	</PhysicalProperties>
+	<ChannelDefinition Align="8">
+		<Channel ChannelNo="1" Name="Red" Semantic="Red Coarse" Category="Colour" DefaultValue="0" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="RedFine" Semantic="Red Fine" Category="Colour" DefaultValue="0" BitRes="16" ByteNo="0" MasterChannelNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Green" Semantic="Green Coarse" Category="Colour" DefaultValue="0" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="GreenFine" Semantic="Green Fine" Category="Colour" DefaultValue="0" BitRes="16" ByteNo="0" MasterChannelNo="3" HighlightValue="255"/>
+		<Channel ChannelNo="5" Name="Blue" Semantic="Blue Coarse" Category="Colour" DefaultValue="0" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="6" Name="BlueFine" Semantic="Blue Fine" Category="Colour" DefaultValue="0" BitRes="16" ByteNo="0" MasterChannelNo="5" HighlightValue="255"/>
+		<Channel ChannelNo="7" Name="White" Semantic="White Coarse" Category="Colour" DefaultValue="0" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="8" Name="WhiteFine" Semantic="White Fine" Category="Colour" DefaultValue="0" BitRes="16" ByteNo="0" MasterChannelNo="7" HighlightValue="255"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

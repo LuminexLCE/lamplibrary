@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+        ../../../main_device.xsd" Name="Robin CycFX8 Mode3" type="YokeWash" ShortName="Robincycfx8m3">
+	<SubDevice XmlFile="control.xml" Patch="true" Name="Robin CycFX8 Mode3"/>
+	<SubDevice XmlFile="rgbd.xml"/>
+	<SubDevice XmlFile="rgbd.xml"/>
+	<SubDevice XmlFile="rgbd.xml"/>
+	<SubDevice XmlFile="rgbd.xml"/>
+	<SubDevice XmlFile="rgbd.xml"/>
+	<SubDevice XmlFile="rgbd.xml"/>
+	<SubDevice XmlFile="rgbd.xml"/>
+	<SubDevice XmlFile="rgbd.xml"/>
+</MainDevice>
