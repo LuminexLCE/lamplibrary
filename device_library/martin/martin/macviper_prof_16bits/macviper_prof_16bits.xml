@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="Mac 2000 Viper" Firmware="" Mode="16bits"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>36</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>472</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>472</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>731</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>Osram</Type>
+			<Model>Osram HTI 1000/PS Lok-it</Model>
+			<Power>1000</Power>
+			<ColorTemp>6000</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="26">
+		<Channel ChannelNo="1" Name="Shutter" Semantic="Shutter" Category="Beam" BitRes="8" DefaultValue="30" HighlightValue="30"/>
+		<Channel ChannelNo="2" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="CTO" Semantic="CTO" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="Colour1" Semantic="Colour/Gobo" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Gobo1" Semantic="Gobo1" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Gobo1Pos" Semantic="Gobo1 Pos1" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Gobo1PosFine" Semantic="Gobo1 Pos Fine" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="0" MasterChannelNo="9" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Gobo2" Semantic="Gobo2" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Gobo2Pos" Semantic="Gobo2 Pos" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Gobo2PosFine" Semantic="Gobo2 Pos Fine" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="0" MasterChannelNo="12" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="Effect1" Semantic="Effect" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="Effect1Speed" Semantic="Animation Speed" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="16" Name="Frost1" Semantic="Frost" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="17" Name="Prism1" Semantic="Prism" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="18" Name="Prism1Rot" Semantic="Prism rot" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="19" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="20" Name="Zoom" Semantic="Zoom" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="21" Name="Focus" Semantic="Focus" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="22" Name="Pan" Semantic="Pan Coarse" Category="Position" BitRes="16" DefaultValue="127" ByteNo="1"/>
+		<Channel ChannelNo="23" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" DefaultValue="127" ByteNo="0" MasterChannelNo="22"/>
+		<Channel ChannelNo="24" Name="Tilt" Semantic="Tilt Coarse" Category="Position" BitRes="16" DefaultValue="127" ByteNo="1"/>
+		<Channel ChannelNo="25" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" DefaultValue="127" ByteNo="0" MasterChannelNo="24"/>
+		<Channel ChannelNo="26" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

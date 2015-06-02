@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Mac 500 Mode 4" type="YokeSpot" ShortName="Mac500m4">
+	<SubDevice XmlFile="mac500_m4.xml" Patch="true" Name="Mac 500 Mode4"/>
+</MainDevice>

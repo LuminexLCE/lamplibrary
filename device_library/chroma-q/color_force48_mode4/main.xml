@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="Chroma-Q Color Force 48 Mode4" type="RGB" ShortName="ChromaQ-CF48-M4">
+	<SubDevice XmlFile="rgba.xml" Patch="true" Name="ChromaQ-CF48-M4"/>
+	<SubDevice XmlFile="rgba.xml" Patch="false"/>
+	<SubDevice XmlFile="rgba.xml" Patch="false"/>
+	<SubDevice XmlFile="rgba.xml" Patch="false"/>
+	<SubDevice XmlFile="rgba.xml" Patch="false"/>
+	<SubDevice XmlFile="rgba.xml" Patch="false"/>
+	<SubDevice XmlFile="rgba.xml" Patch="false"/>
+	<SubDevice XmlFile="rgba.xml" Patch="false"/>
+</MainDevice>

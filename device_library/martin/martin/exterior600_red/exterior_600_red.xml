@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="Exterior 600 Reduced" Firmware="" Mode="Reduced"/>
+	<PhysicalProperties Type="CMY">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>42.7</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>375</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>421</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>576</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>MSD</Type>
+			<Model>philips MSD 575</Model>
+			<Power>575</Power>
+			<ColorTemp>6000</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="5">
+		<Channel ChannelNo="1" Name="LampCTRL" Semantic="LampCTRL" Category="Control" DefaultValue="50"/>
+		<Channel ChannelNo="2" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="3" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="4" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="5" Name="MSpeed" Semantic="MSpeed" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="MagicBlade R Ext" type="Yoke" ShortName="MagicBlade-R Ext">
+	<SubDevice XmlFile="control.xml" Patch="true" Name="MagicBlade-R Ext"/>
+	<SubDevice XmlFile="rgbw.xml"/>
+	<SubDevice XmlFile="rgbw.xml"/>
+	<SubDevice XmlFile="rgbw.xml"/>
+	<SubDevice XmlFile="rgbw.xml"/>
+	<SubDevice XmlFile="rgbw.xml"/>
+	<SubDevice XmlFile="rgbw.xml"/>
+	<SubDevice XmlFile="rgbw.xml"/>
+</MainDevice>

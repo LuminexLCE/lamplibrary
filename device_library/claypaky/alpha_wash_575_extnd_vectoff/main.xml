@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+        ../../../main_device.xsd" Name="Alpha Wash 575 Extended - Vector Off" type="YokeWash" ShortName="AWash575ExtndVctOff">
+	<SubDevice XmlFile="alpha_wash_575_extnd_vectoff.xml" Patch="true" Name="Alpha Wash 575 Extended - Vector Off"/>
+</MainDevice>

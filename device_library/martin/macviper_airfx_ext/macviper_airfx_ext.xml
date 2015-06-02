@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="Mac Viper AirFX" Firmware="" Mode="Extended"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value></Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type></Type>
+			<Model></Model>
+			<Power></Power>
+			<ColorTemp></ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="28">
+		<Channel ChannelNo="1" Name="Shutter" Semantic="Shutter" Category="Beam" BitRes="8" DefaultValue="30" HighlightValue="30"/>
+		<Channel ChannelNo="2" Name="Intensity1" Semantic="Dimmer" Category="Intensity" BitRes="16" ByteNo="1" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Intensity1Fine" Semantic="Dimmer Fine" Category="Intensity" BitRes="16" ByteNo="0" MasterChannelNo="2" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="CTO" Semantic="CTO" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Colour1" Semantic="Colour/Gobo" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Gobo1" Semantic="Gobo1" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Gobo1Pos" Semantic="Gobo1 Fine" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="Gobo1Rot" Semantic="Gobo1 Fine2 Fine" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Gobo2" Semantic="Gobo2" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Effect1" Semantic="Effect Wash" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="Zoom" Semantic="Zoom" Category="Beam" BitRes="16" ByteNo="1" DefaultValue="0"/>
+		<Channel ChannelNo="16" Name="ZoomFine" Semantic="Zoom Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="15" DefaultValue="0"/>
+		<Channel ChannelNo="17" Name="Focus" Semantic="Focus" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="18" Name="FocusFine" Semantic="Focus Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="17" DefaultValue="0"/>
+		<Channel ChannelNo="19" Name="Pan" Semantic="Pan Coarse" Category="Position" BitRes="16" DefaultValue="127" ByteNo="1"/>
+		<Channel ChannelNo="20" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" DefaultValue="127" ByteNo="0" MasterChannelNo="19"/>
+		<Channel ChannelNo="21" Name="Tilt" Semantic="Tilt Coarse" Category="Position" BitRes="16" DefaultValue="127" ByteNo="1"/>
+		<Channel ChannelNo="22" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" DefaultValue="127" ByteNo="0" MasterChannelNo="21"/>
+		<Channel ChannelNo="23" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="24" Name="Trail" Semantic="Reserved" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="25" Name="Trail" Semantic="Reserved" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="26" Name="Trail" Semantic="Reserved" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="27" Name="Trail" Semantic="Reserved" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="28" Name="Trail" Semantic="Reserved" Category="Control" DefaultValue="0"/>
+		</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

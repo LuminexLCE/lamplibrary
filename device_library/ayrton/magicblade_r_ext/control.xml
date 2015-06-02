@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Ayrton" Model="Control"/>
+	<PhysicalProperties Type="Control"/>
+	<ChannelDefinition Align="16">
+		<Channel ChannelNo="1" Name="Pan" Semantic="Pan" Category="Position" DefaultValue="127" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1" DefaultValue="127"/>
+		<Channel ChannelNo="3" Name="Tilt" Semantic="Tilt" Category="Position" DefaultValue="127" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3" DefaultValue="127"/>
+		<Channel ChannelNo="5" Name="PanTiltSpeed" Semantic="Pan/Tilt Speed" Category="Position"/>
+		<Channel ChannelNo="6" Name="PanRot" Semantic="Pan Cont. Rot." Category="Position"/>
+		<Channel ChannelNo="7" Name="TiltRot" Semantic="Tilt Cont. Rot" Category="Position"/>
+		<Channel ChannelNo="8" Name="Shutter" Semantic="Shutter / Strobe" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="9" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0"/>
+		<Channel ChannelNo="10" Name="MacroColour" Semantic="Color Macro" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="11" Name="Effect1" Semantic="Color Presets" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="12" Name="Effect2" Semantic="Chase Patterns" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="13" Name="Effect2Speed" Semantic="Chase Speed" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="14" Name="Effect2Xfade" Semantic="Chase Fade" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="15" Name="Intensity2" Semantic="Color Presets Dimmer" Category="Intensity" DefaultValue="0"/>
+		<Channel ChannelNo="16" Name="Control" Semantic="Reset" Category="Control" DefaultValue="0"/>
+		</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

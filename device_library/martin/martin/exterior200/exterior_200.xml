@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="Exterior 200" Firmware=""/>
+	<PhysicalProperties Type="CMY">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>15</Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value>310</Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value>301</Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value>402</Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>CDM</Type>
+			<Model>philips CDM SA/T 150w</Model>
+			<Power>150</Power>
+			<ColorTemp>4000</ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="7">
+		<Channel ChannelNo="1" Name="LampCTRL" Semantic="LampCTRL" Category="Control"/>
+		<Channel ChannelNo="2" Name="Intensity1" Semantic="Dimmer" Category="Intensity"
+			DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0"
+			HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0"
+			HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0"
+			HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="CMYSpeed" Semantic="CMYSpeed" Category="Control"
+			DefaultValue="0"/>
+		<Channel ChannelNo="7" Name="MSpeed" Semantic="MSpeed" Category="Control" DefaultValue="246"
+		/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition>
+		<FuncDiscr ChannelName="LampCTRL">
+			<Range Semantic="Reserved" DmxBottom="0" DmxTop="207" DmxToPhys="fix"/>
+			<Range SubName="Reset" Semantic="Reset" DmxBottom="208" DmxTop="217" DmxToPhys="fix"/>
+			<Range Semantic="Reserved" DmxBottom="218" DmxTop="227" DmxToPhys="fix"/>
+			<Range SubName="LampOn" Semantic="Lamp On" DmxBottom="228" DmxTop="237" DmxToPhys="fix"/>
+			<Range Semantic="Reserved" DmxBottom="238" DmxTop="247" DmxToPhys="fix"/>
+			<Range SubName="LampOff" Semantic="Lamp Off" DmxBottom="248" DmxTop="255"
+				DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Intensity1">
+			<Range DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Cyan">
+			<Range DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Magenta">
+			<Range DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="Yellow">
+			<Range DmxBottom="0" DmxTop="255" DmxToPhys="proportionalUp"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="CMYSpeed">
+			<Range SubName="Off" Semantic="Off" DmxBottom="0" DmxTop="14" DmxToPhys="fix"/>
+			<Range Semantic="CMY Slow" DmxBottom="15" DmxTop="34" DmxToPhys="fix"/>
+			<Range Semantic="CMY Medium" DmxBottom="35" DmxTop="54" DmxToPhys="fix"/>
+			<Range Semantic="CMY Fast" DmxBottom="55" DmxTop="74" DmxToPhys="fix"/>
+			<Range Semantic="MY Slow" DmxBottom="75" DmxTop="94" DmxToPhys="fix"/>
+			<Range Semantic="MY Medium" DmxBottom="95" DmxTop="114" DmxToPhys="fix"/>
+			<Range Semantic="MY Fast" DmxBottom="115" DmxTop="134" DmxToPhys="fix"/>
+			<Range Semantic="CM Slow" DmxBottom="135" DmxTop="154" DmxToPhys="fix"/>
+			<Range Semantic="CM Medium" DmxBottom="155" DmxTop="174" DmxToPhys="fix"/>
+			<Range Semantic="CM Fast" DmxBottom="175" DmxTop="194" DmxToPhys="fix"/>
+			<Range Semantic="CY Slow" DmxBottom="195" DmxTop="214" DmxToPhys="fix"/>
+			<Range Semantic="CY Medium" DmxBottom="215" DmxTop="234" DmxToPhys="fix"/>
+			<Range Semantic="CY Fast" DmxBottom="235" DmxTop="255" DmxToPhys="fix"/>
+		</FuncDiscr>
+		<FuncDiscr ChannelName="MSpeed">
+			<Range Semantic="Follow" DmxBottom="0" DmxTop="2" DmxToPhys="fix"/>
+			<Range SubName="MoveSpeedVector" Semantic="Vector" DmxBottom="3" DmxTop="245"
+				DmxToPhys="proportionalUp"/>
+			<Range Semantic="Reserved" DmxBottom="246" DmxTop="251" DmxToPhys="fix"/>
+			<Range SubName="MoveSpeedMax" Semantic="Fast" DmxBottom="252" DmxTop="255"
+				DmxToPhys="fix"/>
+		</FuncDiscr>
+	</ParameterDefinition>
+</DeviceDescription>

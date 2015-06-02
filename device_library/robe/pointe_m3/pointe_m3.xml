@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by test (test) -->
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Robe" Model="Pointe" Firmware="" Mode="3"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value></Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type></Type>
+			<Model></Model>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="30">
+		<Channel ChannelNo="1" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="3" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3" DefaultValue="128"/>
+		<Channel ChannelNo="5" Name="PanTiltSpeed" Semantic="Pan/Tilt Speed" Category="Control"/>
+		<Channel ChannelNo="6" Name="Control" Semantic="Power / Special Functions" Category="Control"/>
+		<Channel ChannelNo="7" Name="Colour1" Semantic="Colour Wheel" Category="Colour" BitRes="16" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Colour1Fine" Semantic="Colour Wheel Fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="7" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Effect1Speed" Semantic="Effect Speed" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="Frost1Fine" Semantic="Frost Time" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="22" HighlightValue="0"/>
+		<Channel ChannelNo="11" Name="ColourTime" Semantic="Color Time" Category="Colour" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="GoboTime" Semantic="Static Gobo Time" Category="Beam"/>
+		<Channel ChannelNo="13" Name="Prism1Speed" Semantic="Prism Time" Category="Beam"/>
+		<Channel ChannelNo="14" Name="ZoomSpeed" Semantic="Zoom Time" Category="Beam"/>
+		<Channel ChannelNo="15" Name="FocusSpeed" Semantic="Focus Time" Category="Beam"/>
+		<Channel ChannelNo="16" Name="Gobo1" Semantic="Static Gobo Wheel" Category="Beam"/>
+		<Channel ChannelNo="17" Name="Gobo2" Semantic="Rotating Gobo Wheel" Category="Beam"/>
+		<Channel ChannelNo="18" Name="Gobo2Rot" Semantic="Gobo Index/Rot" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="19" Name="Gobo2RotFine" Semantic="Gobo Index/Rot Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="18"/>
+		<Channel ChannelNo="20" Name="Prism1" Semantic="Prism" Category="Beam"/>
+		<Channel ChannelNo="21" Name="Prism1Rot" Semantic="Prism Rotation" Category="Beam"/>
+		<Channel ChannelNo="22" Name="Frost1" Semantic="Frost" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="23" Name="Zoom" Semantic="Zoom" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="24" Name="ZoomFine" Semantic="ZoomFine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="23"/>
+		<Channel ChannelNo="25" Name="Focus" Semantic="Focus" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="26" Name="FocusFine" Semantic="Focus Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="26"/>
+		<Channel ChannelNo="27" Name="FocusCtrl" Semantic="Auto Focus" Category="Beam"/>
+		<Channel ChannelNo="28" Name="Shutter" Semantic="Shutter / Strobe" Category="Beam" DefaultValue="255" HighlightValue="255"/>
+		<Channel ChannelNo="29" Name="Intensity1" Semantic="Intensity" Category="Intensity" BitRes="16" ByteNo="1" HighlightValue="255"/>
+		<Channel ChannelNo="30" Name="Intensity1Fine" Semantic="Intensity" Category="Intensity" BitRes="16" ByteNo="0" MasterChannelNo="29" HighlightValue="255"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

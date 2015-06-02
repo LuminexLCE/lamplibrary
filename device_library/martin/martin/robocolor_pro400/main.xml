@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Robocolor pro 400" type="Scroller">
+	<SubDevice XmlFile="robocolor_pro400.xml" Patch="true" Name="Robocolor pro 400"/>
+</MainDevice>
