@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
-	../../../main_device.xsd" Name="MagicPanel R Ext" type="Yoke" ShortName="MagicPanel-R Ext">
-	<SubDevice XmlFile="control.xml" Patch="true" Name="MagicPanel-R Ext"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	<SubDevice XmlFile="rgbw.xml"/>
-	
+  ../../../main_device.xsd" Name="MagicPanel R Ext" type="Yoke" ShortName="MagicPanel-R Ext">
+  <SubDevice XmlFile="control.xml" Patch="true" Name="MagicPanel-R Ext"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
+  <SubDevice XmlFile="rgbw.xml"/>
 </MainDevice>

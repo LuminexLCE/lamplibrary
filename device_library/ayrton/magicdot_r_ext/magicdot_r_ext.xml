@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+  ../../../device_description.xsd">
+  <ManufacturerInfo Manufacturer="Ayrton" Model="Magicdot-r ext" Firmware="1.1" Mode="ext"/>
+  <PhysicalProperties Type="YokeSpot">
+    <Weight>
+      <Unit>kg</Unit>
+      <Value></Value>
+    </Weight>
+    <Geometry>
+      <Width>
+        <Unit>mm</Unit>
+        <Value></Value>
+      </Width>
+      <Depth>
+        <Unit>mm</Unit>
+        <Value></Value>
+      </Depth>
+      <Height>
+        <Unit>mm</Unit>
+        <Value></Value>
+      </Height>
+    </Geometry>
+    <Lamp>
+      <Type></Type>
+      <Model></Model>
+    </Lamp>
+  </PhysicalProperties>
+  <ChannelDefinition Align="17">
+    <Channel ChannelNo="1" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+    <Channel ChannelNo="2" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="1" DefaultValue="128"/>
+    <Channel ChannelNo="3" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+    <Channel ChannelNo="4" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="3" DefaultValue="128"/>
+    <Channel ChannelNo="5" Name="PanTiltSpeed" Semantic="Pan/Tilt Speed" Category="Control"/>
+    <Channel ChannelNo="6" Name="XaxisRot" Semantic="Pan motor" Category="Position"/>
+    <Channel ChannelNo="7" Name="YaxisRot" Semantic="Tilt motor" Category="Position"/>
+    <Channel ChannelNo="8" Name="Red" Semantic="Red" Category="Colour" HighlightValue="255"/>
+    <Channel ChannelNo="9" Name="Green" Semantic="Green" Category="Colour" HighlightValue="255"/>
+    <Channel ChannelNo="10" Name="Blue" Semantic="Blue" Category="Colour" HighlightValue="255"/>
+    <Channel ChannelNo="11" Name="White" Semantic="White" Category="Colour" HighlightValue="255"/>
+    <Channel ChannelNo="12" Name="Shutter" Semantic="Shutter" Category="Beam"/>
+    <Channel ChannelNo="13" Name="Intensity1" Semantic="Dimmer" Category="Intensity"/>
+    <Channel ChannelNo="14" Name="Macro1" Semantic="Color macro" Category="Colour"/>
+    <Channel ChannelNo="15" Name="Colour1" Semantic="Color preset" Category="Colour"/>
+    <Channel ChannelNo="16" Name="Colour2" Semantic="Color dimmer" Category="Colour"/>
+    <Channel ChannelNo="17" Name="Control" Semantic="Reset" Category="Control"/>
+  </ChannelDefinition>
+  <DependencyDeclaration/>
+  <ParameterDefinition/>
+</DeviceDescription>
