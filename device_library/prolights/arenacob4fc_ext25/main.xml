@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="Arena COB4 FC Ext25" type="RGB" ShortName="ArenaCob4ext27">
+	<SubDevice XmlFile="rgbw.xml" Patch="true" Name="Arena COB4 FC"/>
+	<SubDevice XmlFile="rgbw.xml" Patch="false"/>
+	<SubDevice XmlFile="rgbw.xml" Patch="false"/>
+	<SubDevice XmlFile="rgbw.xml" Patch="false"/>
+	<SubDevice XmlFile="control.xml" Patch="false"/>
+</MainDevice>

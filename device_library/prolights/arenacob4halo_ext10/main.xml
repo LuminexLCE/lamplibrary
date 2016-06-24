@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="Arena COB4 Halo Ext10" type="RGB" ShortName="ArenaCob4Halext10">
+	<SubDevice XmlFile="dimmer.xml" Patch="true" Name="Arena COB4 Halo Ext10"/>
+	<SubDevice XmlFile="white.xml" Patch="false"/>
+	<SubDevice XmlFile="white.xml" Patch="false"/>
+	<SubDevice XmlFile="white.xml" Patch="false"/>
+	<SubDevice XmlFile="white.xml" Patch="false"/>
+	<SubDevice XmlFile="control.xml" Patch="false"/>
+</MainDevice>

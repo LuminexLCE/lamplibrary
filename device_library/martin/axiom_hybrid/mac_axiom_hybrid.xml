@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Martin" Model="Axiom Hybrid" Mode="16bits"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value></Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type>Discharge</Type>
+			<Model></Model>
+			<Power></Power>
+			<ColorTemp></ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="23">
+		<Channel ChannelNo="1" Name="Strobe" Semantic="Strobe" Category="Beam" DefaultValue="0" HighlightValue="20"/>
+		<Channel ChannelNo="2" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="CTO" Semantic="CTO" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="Colour1" Semantic="Colour Wheel" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="Gobo1" Semantic="Gobo Wheel" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="Gobo1Rot" Semantic="Gobo Index/Rot" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="10" Name="Gobo1RotFine" Semantic="Gobo Index/Rot Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="9"/>
+		<Channel ChannelNo="11" Name="Gobo2" Semantic="Fixed Gobo Wheel" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Frost1" Semantic="Frost" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Prism1" Semantic="Prism" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="Prism1Rot" Semantic="Prism Rot." Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="Prism1Func" Semantic="Prism Lineator" Category="Beam" HighlightValue="0"/>
+		<Channel ChannelNo="16" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="17" Name="Focus" Semantic="Focus" Category="Beam" BitRes="16" ByteNo="1"/>
+		<Channel ChannelNo="18" Name="Focus" Semantic="Focus" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="17"/>
+		<Channel ChannelNo="19" Name="Pan" Semantic="Pan Coarse" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="20" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="19"/>
+		<Channel ChannelNo="21" Name="Tilt" Semantic="Tilt Coarse" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="22" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="21"/>
+		<Channel ChannelNo="23" Name="Control" Semantic="Fixture Control" Category="Control"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

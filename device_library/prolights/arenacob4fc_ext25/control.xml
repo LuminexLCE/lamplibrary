@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Prolights" Model="Control"/>
+	<PhysicalProperties Type="Control">
+	</PhysicalProperties>
+	<ChannelDefinition Align="9">
+		<Channel ChannelNo="1" Name="RGBCtrl" Semantic="Dynamics Patterns" Category="Colour"/>
+		<Channel ChannelNo="2" Name="RGBSpeed" Semantic="Patterns Speed" Category="Colour"/>
+		<Channel ChannelNo="3" Name="Colour1" Semantic="Foreground Color" Category="Colour"/>
+		<Channel ChannelNo="4" Name="Intensity2" Semantic="Foreground Dimmer" Category="Intensity"/>
+		<Channel ChannelNo="5" Name="Colour2" Semantic="Background Color" Category="Colour"/>
+		<Channel ChannelNo="6" Name="Intensity3" Semantic="Background Dimmer" Category="Intensity"/>
+		<Channel ChannelNo="7" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="8" Name="Strobe" Semantic="Strobe" Category="Beam"/>
+		<Channel ChannelNo="9" Name="Intensity1Fine" Semantic="Dimmer Fade" Category="Intensity"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

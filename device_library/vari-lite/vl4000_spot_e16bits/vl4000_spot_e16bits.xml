@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Var*lite" Model="VL 4000 Spot Enhanced" Firmware="" Mode="16bits"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value></Value>
+		</Weight>
+		<Geometry>
+			<Width>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Width>
+			<Depth>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Depth>
+			<Height>
+				<Unit>mm</Unit>
+				<Value></Value>
+			</Height>
+		</Geometry>
+		<Lamp>
+			<Type></Type>
+			<Model></Model>
+			<Power></Power>
+			<ColorTemp></ColorTemp>
+		</Lamp>
+	</PhysicalProperties>
+	<ChannelDefinition Align="57">
+		<Channel ChannelNo="1" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="3" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="2"/>
+		<Channel ChannelNo="4" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" DefaultValue="128" ByteNo="1"/>
+		<Channel ChannelNo="5" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="4"/>
+		<Channel ChannelNo="6" Name="Focus" Semantic="Edge" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="1"/>
+		<Channel ChannelNo="7" Name="FocusFine" Semantic="Edge Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="6"/>
+		<Channel ChannelNo="8" Name="Zoom" Semantic="Zoom" Category="Beam" DefaultValue="128"/>
+		<Channel ChannelNo="9" Name="ZoomFine" Semantic="Zoom Fine" Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="8"/>
+		<Channel ChannelNo="10" Name="LampCTRL" Semantic="Programming Control" Category="Control" DefaultValue="0"/>
+		<Channel ChannelNo="11" Name="Cyan" Semantic="Cyan" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="12" Name="Yellow" Semantic="Yellow" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="13" Name="Magenta" Semantic="Magenta" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="14" Name="CTO" Semantic="CTO" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="15" Name="Colour1" Semantic="Fixed Color Wheel 1" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="16" Name="Colour1Func" Semantic="Fixed Color Wheel 1 Ctrl" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="17" Name="Colour2" Semantic="Fixed Color Wheel 1" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="18" Name="Colour2Func" Semantic="Fixed Color Wheel 1 Ctrl" Category="Colour" DefaultValue="0"/>
+		<Channel ChannelNo="19" Name="Gobo1" Semantic="Gobo 1" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="20" Name="Gobo1Rot" Semantic="Gobo 1 Index/Rot" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="21" Name="Gobo1RotFine" Semantic="Gobo 1 Index/Rot Fine " Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="20" HighlightValue="0"/>
+		<Channel ChannelNo="22" Name="Gobo1Func" Semantic="Gobo 1 Control" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="23" Name="Gobo2" Semantic="Gobo 2" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="24" Name="Gobo2Rot" Semantic="Gobo 2 Index/Rot" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="25" Name="Gobo2RotFine" Semantic="Gobo 2 Index/Rot Fine " Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="24" HighlightValue="0"/>
+		<Channel ChannelNo="26" Name="Gobo2Func" Semantic="Gobo 2 Control" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="27" Name="Effect1" Semantic="Animation Wheel 1" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="28" Name="Effect1Rot" Semantic="Animation Wheel 1 Index/Rot" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="29" Name="Effect1RotFine" Semantic="Animation Wheel 1 Index/Rot Fine " Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="28" HighlightValue="0"/>
+		<Channel ChannelNo="30" Name="Effect1Func" Semantic="Animation Wheel 1 Control" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="31" Name="Effect2" Semantic="Animation Wheel 2" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="32" Name="Effect2Rot" Semantic="Animation Wheel 2 Index/Rot" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="33" Name="Effect2RotFine" Semantic="Animation Wheel 2 Index/Rot Fine " Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="32" HighlightValue="0"/>
+		<Channel ChannelNo="34" Name="Effect2Func" Semantic="Animation Wheel 2 Control" Category="Beam" DefaultValue="0"/>
+		<Channel ChannelNo="35" Name="Iris" Semantic="Iris" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="36" Name="Framing1a" Semantic="Frame 1a" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="37" Name="Framing1b" Semantic="Frame 1b" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="38" Name="Framing2a" Semantic="Frame 2a" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="39" Name="Framing2b" Semantic="Frame 2b" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="40" Name="Framing3a" Semantic="Frame 3a" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="41" Name="Framing3b" Semantic="Frame 3b" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="42" Name="Framing4a" Semantic="Frame 4a" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="43" Name="Framing4b" Semantic="Frame 4b" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="44" Name="FramingRot" Semantic="Frame Rotation" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="45" Name="Prism1" Semantic="Prism" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="46" Name="Prism1Rot" Semantic="Prism1 Index/Rot" Category="Beam" BitRes="16" DefaultValue="0" ByteNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="47" Name="Prism1RotFine" Semantic="Prism1 Index/Rot Fine " Category="Beam" BitRes="16" ByteNo="0" MasterChannelNo="46" HighlightValue="0"/>
+		<Channel ChannelNo="48" Name="Prism1Func" Semantic="Prism Diverge" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="49" Name="Frost1" Semantic="Frost" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="50" Name="Strobe" Semantic="Strobe Speed" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="51" Name="StrobeFx" Semantic="Strobe Control" Category="Beam" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="52" Name="FocusTime" Semantic="Focus Timing" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="53" Name="MirrorCtrl" Semantic="Optics Timing" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="54" Name="ColourTime" Semantic="Colour Timing" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="55" Name="BeamTime" Semantic="Beam Timing" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="56" Name="GoboTime" Semantic="Gobo Timing" Category="Control" DefaultValue="255"/>
+		<Channel ChannelNo="57" Name="Control" Semantic="Control" Category="Control" DefaultValue="0"/>
+	</ChannelDefinition>
+	<DependencyDeclaration>
+		
+	</DependencyDeclaration>
+	<ParameterDefinition>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</ParameterDefinition>
+</DeviceDescription>

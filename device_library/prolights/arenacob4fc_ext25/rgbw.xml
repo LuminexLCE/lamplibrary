@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Prolights" Model="RGBW Cell"/>
+	<PhysicalProperties Type="RGB">
+	</PhysicalProperties>
+	<ChannelDefinition Align="4">
+		<Channel ChannelNo="1" Name="Red" Semantic="Red" Category="Colour" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="2" Name="Green" Semantic="Green" Category="Colour" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="3" Name="Blue" Semantic="Blue" Category="Colour" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="4" Name="White" Semantic="White" Category="Colour" DefaultValue="0" HighlightValue="255"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>
