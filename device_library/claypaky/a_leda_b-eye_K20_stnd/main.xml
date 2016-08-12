@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+        ../../../main_device.xsd" Name="A.leda B-eye K20 stnd" type="YokeSpot" ShortName="K20Stnd">
+	<SubDevice XmlFile="a_leda_b_eye_k20_stnd.xml" Patch="true" Name="B-eye K20"/>
+</MainDevice>
