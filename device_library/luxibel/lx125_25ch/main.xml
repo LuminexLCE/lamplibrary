@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="LX 125 25ch" type="Dimmer" ShortName="LX12525ch">
+	<SubDevice XmlFile="led.xml" Patch="true" Name="LX 125 25ch"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>
+	<SubDevice XmlFile="led.xml" Patch="false"/>	
+</MainDevice>
