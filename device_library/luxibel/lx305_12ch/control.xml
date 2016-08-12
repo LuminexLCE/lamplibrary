@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Luxibel" Model="Control"/>
+	<PhysicalProperties Type="Control">
+	</PhysicalProperties>
+	<ChannelDefinition Align="4">
+		<Channel ChannelNo="1" Name="Macro1" Semantic="Auto Programs" Category="Beam"/>
+		<Channel ChannelNo="2" Name="MacroColourSpeed" Semantic="Auto Speed" Category="Beam"/>
+		<Channel ChannelNo="3" Name="Intensity1" Semantic="Dimmer" Category="Intensity"/>
+		<Channel ChannelNo="4" Name="Strobe" Semantic="Strobe" Category="Beam"/>
+	</ChannelDefinition>
+	<DependencyDeclaration/>
+	<ParameterDefinition/>
+</DeviceDescription>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+	../../../main_device.xsd" Name="LX 305 12ch" type="Effect" ShortName="LX30512ch">
+	<SubDevice XmlFile="segment.xml" Patch="true" Name="LX 305 12ch"/>
+	<SubDevice XmlFile="segment.xml" Patch="false"/>
+	<SubDevice XmlFile="segment.xml" Patch="false"/>
+	<SubDevice XmlFile="segment.xml" Patch="false"/>
+	<SubDevice XmlFile="segment.xml" Patch="false"/>
+	<SubDevice XmlFile="segment.xml" Patch="false"/>
+	<SubDevice XmlFile="segment.xml" Patch="false"/>
+	<SubDevice XmlFile="segment.xml" Patch="false"/>
+	<SubDevice XmlFile="control.xml" Patch="false"/>
+</MainDevice>
