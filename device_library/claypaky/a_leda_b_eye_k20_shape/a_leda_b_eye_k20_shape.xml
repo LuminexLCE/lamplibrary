@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="../ns_description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_description
+	../../../device_description.xsd">
+	<ManufacturerInfo Manufacturer="Clay Paky" Model="A_leda B-eye K20 Shape" Mode="Shape"/>
+	<PhysicalProperties Type="YokeSpot">
+		<Weight>
+			<Unit>kg</Unit>
+			<Value>0</Value>
+		</Weight>
+	</PhysicalProperties>
+	<ChannelDefinition Align="35">
+		<Channel ChannelNo="1" Name="Red" Semantic="Red" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="2" Name="RedFine" Semantic="Red Fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="1" HighlightValue="0"/>
+		<Channel ChannelNo="3" Name="Green" Semantic="Green" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="4" Name="GreenFine" Semantic="Green Fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="3" HighlightValue="0"/>
+		<Channel ChannelNo="5" Name="Blue" Semantic="Blue" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="6" Name="BlueFine" Semantic="Blue Fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="5" HighlightValue="0"/>
+		<Channel ChannelNo="7" Name="White" Semantic="White" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="8" Name="WhiteFine" Semantic="White Fine" Category="Colour" BitRes="16" ByteNo="0" MasterChannelNo="7" HighlightValue="0"/>
+		<Channel ChannelNo="9" Name="CTO" Semantic="CTO" Category="Colour" DefaultValue="0" HighlightValue="0"/>
+		<Channel ChannelNo="10" Name="ColourMacro" Semantic="Colour Macro" Category="Colour" />
+		<Channel ChannelNo="11" Name="Shutter" Semantic="Stop / Strobe" Category="Beam" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="12" Name="Intensity1" Semantic="Dimmer" Category="Intensity" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="13" Name="Intensity1Fine" Semantic="Dimmer Fine" Category="Intensity" BitRes="16" ByteNo="0" MasterChannelNo="12"/>
+		<Channel ChannelNo="14" Name="Pan" Semantic="Pan" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="15" Name="PanFine" Semantic="Pan Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="14"/>
+		<Channel ChannelNo="16" Name="Tilt" Semantic="Tilt" Category="Position" BitRes="16" ByteNo="1" DefaultValue="128"/>
+		<Channel ChannelNo="17" Name="TiltFine" Semantic="Tilt Fine" Category="Position" BitRes="16" ByteNo="0" MasterChannelNo="16"/>	
+		<Channel ChannelNo="18" Name="Function1" Semantic="Function" Category="Control"/>
+		<Channel ChannelNo="19" Name="Control" Semantic="Reset" Category="Control"/>
+		<Channel ChannelNo="20" Name="Zoom" Semantic="Zoom" Category="Beam"/>
+		<Channel ChannelNo="21" Name="ZoomRot" Semantic="Zoom Rotation" Category="Beam"/>
+		<Channel ChannelNo="22" Name="ShapeSelect" Semantic="Shape Selection" Category="Beam"/>
+		<Channel ChannelNo="23" Name="ShapeSpeed" Semantic="Shape Speed" Category="Beam"/>
+		<Channel ChannelNo="24" Name="ShapeFade" Semantic="Shape Fade" Category="Beam"/>
+		<Channel ChannelNo="25" Name="ShapeR" Semantic="Shape Red" Category="Beam"/>
+		<Channel ChannelNo="26" Name="ShapeG" Semantic="Shape Green" Category="Beam"/>
+		<Channel ChannelNo="27" Name="ShapeB" Semantic="Shape Blue" Category="Beam"/>
+		<Channel ChannelNo="28" Name="ShapeW" Semantic="Shape White" Category="Beam"/>
+		<Channel ChannelNo="29" Name="Intensity2" Semantic="Shape Dimmer" Category="Beam" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="30" Name="Intensity3" Semantic="Background Dimmer" Category="Beam" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="31" Name="ShapeTrans" Semantic="Shape Transition" Category="Beam"/>
+		<Channel ChannelNo="32" Name="ShapeOff" Semantic="Shape Offset" Category="Beam"/>
+		<Channel ChannelNo="33" Name="Shutter1" Semantic="Foreground Strobe" Category="Beam" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="34" Name="Shutter2" Semantic="Background Strobe" Category="Beam" DefaultValue="0" HighlightValue="255"/>
+		<Channel ChannelNo="35" Name="BackgroundSel" Semantic="Backround Select" Category="Beam"/>
+	</ChannelDefinition>
+	<DependencyDeclaration> </DependencyDeclaration>
+	<ParameterDefinition/>
+</DeviceDescription>
