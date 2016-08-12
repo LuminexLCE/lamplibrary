@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainDevice xmlns="../ns_main" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../ns_main
+    ../../../main_device.xsd" Name="Atomic 3000 LED+Scroller" type="Effect" ShortName="Atomic3000LEDScrlExt">
+	<SubDevice XmlFile="atomic_3000_led_scr_ext.xml" Patch="true" Name="Atomic 3000 LED+Scroller Ext"/>
+</MainDevice>
